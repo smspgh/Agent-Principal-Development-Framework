@@ -1,0 +1,148 @@
+{
+  "phaseNumber": 4,
+  "phaseId": "BACKEND",
+  "phaseName": "Backend Development",
+  "description": "Build the server-side application including APIs, business logic, and integrations.",
+  "primaryAgents": ["BACKEND"],
+  "objectives": [
+    "Establish server foundation and database connectivity",
+    "Implement secure authentication and authorization",
+    "Build core API endpoints and business logic",
+    "Integrate third-party services",
+    "Create comprehensive API documentation"
+  ],
+  "steps": [
+    {
+      "stepId": "4.1",
+      "stepName": "Initialize server and database connection",
+      "agentId": "BACKEND",
+      "automationLevel": "full",
+      "approvalRequired": false,
+      "description": "Set up the foundational server infrastructure and database connectivity.",
+      "tasks": [
+        {"taskId": "4.1.1", "task": "Set up server framework and project structure", "deliverables": ["Project scaffold"]},
+        {"taskId": "4.1.2", "task": "Configure environment variables and configuration management", "deliverables": ["Config management"]},
+        {"taskId": "4.1.3", "task": "Establish database connection with pooling", "deliverables": ["Database connection"]},
+        {"taskId": "4.1.4", "task": "Set up ORM or query builder", "deliverables": ["ORM configuration"]},
+        {"taskId": "4.1.5", "task": "Implement health check endpoints", "deliverables": ["Health endpoints"]},
+        {"taskId": "4.1.6", "task": "Configure graceful shutdown handling", "deliverables": ["Shutdown handling"]}
+      ],
+      "outputs": ["Working server", "Database connection", "Health checks"],
+      "agentPrompt": "Initialize the backend project with the selected technology stack. Set up database connection, configuration management, and health checks. Follow the architectural decisions from Phase 1."
+    },
+    {
+      "stepId": "4.2",
+      "stepName": "Implement authentication and authorization",
+      "agentId": "BACKEND",
+      "automationLevel": "full",
+      "approvalRequired": false,
+      "description": "Build secure user authentication and role-based access control.",
+      "tasks": [
+        {"taskId": "4.2.1", "task": "Implement user registration with validation", "deliverables": ["Registration endpoint"]},
+        {"taskId": "4.2.2", "task": "Build login with secure password handling", "deliverables": ["Login endpoint"]},
+        {"taskId": "4.2.3", "task": "Set up JWT or session-based authentication", "deliverables": ["Auth mechanism"]},
+        {"taskId": "4.2.4", "task": "Implement refresh token rotation", "deliverables": ["Token refresh"]},
+        {"taskId": "4.2.5", "task": "Build role-based access control (RBAC)", "deliverables": ["RBAC implementation"]},
+        {"taskId": "4.2.6", "task": "Add OAuth2/OIDC for social login if required", "deliverables": ["Social login"]},
+        {"taskId": "4.2.7", "task": "Implement MFA/2FA support", "deliverables": ["MFA implementation"]},
+        {"taskId": "4.2.8", "task": "Set up account recovery flows", "deliverables": ["Password reset flow"]}
+      ],
+      "outputs": ["Authentication system", "Authorization system", "Account management"],
+      "agentPrompt": "Implement secure authentication following OWASP guidelines. Use bcrypt for password hashing, implement JWT with refresh tokens, and build RBAC. Include unit tests for all auth flows."
+    },
+    {
+      "stepId": "4.3",
+      "stepName": "Develop core API endpoints and business logic",
+      "agentId": "BACKEND",
+      "automationLevel": "full",
+      "approvalRequired": false,
+      "description": "Build the main application functionality and API surface.",
+      "tasks": [
+        {"taskId": "4.3.1", "task": "Implement data models and ORM mappings", "deliverables": ["Data models"]},
+        {"taskId": "4.3.2", "task": "Build CRUD operations for all entities", "deliverables": ["CRUD endpoints"]},
+        {"taskId": "4.3.3", "task": "Develop business logic layer with proper separation", "deliverables": ["Business logic layer"]},
+        {"taskId": "4.3.4", "task": "Implement input validation and sanitization", "deliverables": ["Input validation"]},
+        {"taskId": "4.3.5", "task": "Add proper error handling and error responses", "deliverables": ["Error handling"]},
+        {"taskId": "4.3.6", "task": "Implement pagination, filtering, and sorting", "deliverables": ["List operations"]},
+        {"taskId": "4.3.7", "task": "Add request logging and audit trails", "deliverables": ["Logging/auditing"]}
+      ],
+      "outputs": ["Core API endpoints", "Business logic implementation", "Audit logging"],
+      "agentPrompt": "Implement all API endpoints from the OpenAPI specification. Follow clean architecture with service layer separation. Include comprehensive validation and error handling. Write unit tests."
+    },
+    {
+      "stepId": "4.4",
+      "stepName": "Integrate third-party services",
+      "agentId": "BACKEND",
+      "automationLevel": "full",
+      "approvalRequired": false,
+      "description": "Connect external services required for application functionality.",
+      "tasks": [
+        {"taskId": "4.4.1", "task": "Integrate payment gateway (Stripe, etc.)", "deliverables": ["Payment integration"]},
+        {"taskId": "4.4.2", "task": "Set up transactional email service", "deliverables": ["Email service"]},
+        {"taskId": "4.4.3", "task": "Configure cloud storage for file uploads", "deliverables": ["File storage"]},
+        {"taskId": "4.4.4", "task": "Integrate notification services (push, SMS)", "deliverables": ["Notifications"]},
+        {"taskId": "4.4.5", "task": "Set up analytics and event tracking", "deliverables": ["Analytics integration"]},
+        {"taskId": "4.4.6", "task": "Implement circuit breakers for external services", "deliverables": ["Circuit breakers"]}
+      ],
+      "outputs": ["Payment integration", "Email service", "File storage", "Notifications"],
+      "agentPrompt": "Integrate required third-party services based on the requirements. Implement proper error handling with circuit breakers. Use service adapters for clean abstraction."
+    },
+    {
+      "stepId": "4.5",
+      "stepName": "Implement background jobs and async processing",
+      "agentId": "BACKEND",
+      "automationLevel": "full",
+      "approvalRequired": false,
+      "description": "Build infrastructure for asynchronous task processing.",
+      "tasks": [
+        {"taskId": "4.5.1", "task": "Set up job queue (Redis, SQS, etc.)", "deliverables": ["Job queue"]},
+        {"taskId": "4.5.2", "task": "Implement background workers", "deliverables": ["Worker processes"]},
+        {"taskId": "4.5.3", "task": "Build scheduled/cron jobs", "deliverables": ["Scheduled jobs"]},
+        {"taskId": "4.5.4", "task": "Add job monitoring and retry logic", "deliverables": ["Job monitoring"]},
+        {"taskId": "4.5.5", "task": "Implement dead letter queues for failed jobs", "deliverables": ["DLQ setup"]}
+      ],
+      "outputs": ["Background job system", "Scheduled tasks", "Job monitoring"],
+      "agentPrompt": "Implement background job processing for async tasks like emails, notifications, and data processing. Include retry logic and dead letter queues for reliability."
+    },
+    {
+      "stepId": "4.6",
+      "stepName": "Build real-time features (if applicable)",
+      "agentId": "BACKEND",
+      "automationLevel": "full",
+      "approvalRequired": false,
+      "description": "Implement real-time communication capabilities.",
+      "tasks": [
+        {"taskId": "4.6.1", "task": "Implement WebSocket connections", "deliverables": ["WebSocket server"]},
+        {"taskId": "4.6.2", "task": "Build real-time notification system", "deliverables": ["Real-time notifications"]},
+        {"taskId": "4.6.3", "task": "Add presence and typing indicators if needed", "deliverables": ["Presence system"]},
+        {"taskId": "4.6.4", "task": "Implement connection management and scaling", "deliverables": ["Connection management"]},
+        {"taskId": "4.6.5", "task": "Add fallback for non-WebSocket environments", "deliverables": ["Fallback mechanism"]}
+      ],
+      "outputs": ["Real-time communication", "WebSocket infrastructure"],
+      "agentPrompt": "Implement WebSocket server for real-time features if required by the application. Include connection management and fallback mechanisms."
+    },
+    {
+      "stepId": "4.7",
+      "stepName": "Write API documentation",
+      "agentId": "BACKEND",
+      "automationLevel": "full",
+      "approvalRequired": false,
+      "description": "Create comprehensive API documentation for consumers.",
+      "tasks": [
+        {"taskId": "4.7.1", "task": "Document all endpoints using OpenAPI/Swagger", "deliverables": ["OpenAPI specification"]},
+        {"taskId": "4.7.2", "task": "Provide example requests and responses", "deliverables": ["API examples"]},
+        {"taskId": "4.7.3", "task": "Document authentication requirements", "deliverables": ["Auth documentation"]},
+        {"taskId": "4.7.4", "task": "Include error codes and handling", "deliverables": ["Error documentation"]},
+        {"taskId": "4.7.5", "task": "Generate interactive API documentation", "deliverables": ["Interactive docs"]},
+        {"taskId": "4.7.6", "task": "Set up API documentation hosting", "deliverables": ["Hosted documentation"]}
+      ],
+      "outputs": ["API documentation", "Interactive API explorer"],
+      "agentPrompt": "Generate comprehensive API documentation from the implemented endpoints. Include examples, error codes, and authentication details. Set up Swagger UI or similar."
+    }
+  ],
+  "qualityGate": {
+    "name": "backend-complete",
+    "requiredDeliverables": ["auth-system", "api-endpoints", "api-documentation"],
+    "requiredApprovals": []
+  }
+}

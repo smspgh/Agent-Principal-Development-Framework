@@ -1,0 +1,348 @@
+{
+  "methodologyId": "AGENT_PRINCIPAL_DEVOPS",
+  "name": "Agent Principal DevOps",
+  "description": "A solo-operator methodology where one Agent Principal orchestrates specialized AI agents to execute the full software development lifecycle. Optimized for DevOps/CD practices with maximum automation and minimal manual intervention.",
+  "characteristics": [
+    "Single human operator (Agent Principal) with AI agent team",
+    "Automation-first with human approval gates",
+    "Continuous Integration and Delivery",
+    "AI agents handle specialized domain tasks",
+    "Streamlined decision-making through agent recommendations",
+    "Integrated progress tracking and deliverable management"
+  ],
+  "bestFor": [
+    "Solo founders and indie developers",
+    "Rapid prototyping and MVP development",
+    "Side projects requiring professional quality",
+    "Consultants delivering client projects",
+    "Technical product managers building directly",
+    "Maintaining and improving existing applications",
+    "Tech debt reduction and codebase modernization",
+    "Taking over legacy projects"
+  ],
+  "notIdealFor": [
+    "Large team coordination requirements",
+    "Highly regulated industries requiring human attestation",
+    "Projects requiring extensive user research with real participants",
+    "Systems requiring formal security audits before launch"
+  ],
+  "projectModes": {
+    "greenfield": {
+      "description": "New project built from scratch",
+      "entryCommand": "/APDF_init",
+      "startPhase": 1,
+      "workflow": "linear"
+    },
+    "existing": {
+      "description": "Established codebase being onboarded",
+      "entryCommand": "/APDF_onboard",
+      "startPhase": null,
+      "workflow": "audit-driven"
+    }
+  },
+  "agentTeam": {
+    "STRATEGY": {
+      "role": "Strategic advisor and product thinking",
+      "automationLevel": "assisted",
+      "approvalRequired": true
+    },
+    "DESIGN": {
+      "role": "UX/UI design and specifications",
+      "automationLevel": "assisted",
+      "approvalRequired": true
+    },
+    "ARCHITECTURE": {
+      "role": "System design and technical planning",
+      "automationLevel": "full",
+      "approvalRequired": false
+    },
+    "BACKEND": {
+      "role": "Server-side implementation",
+      "automationLevel": "full",
+      "approvalRequired": false
+    },
+    "FRONTEND": {
+      "role": "Client-side implementation",
+      "automationLevel": "full",
+      "approvalRequired": false
+    },
+    "QUALITY": {
+      "role": "Testing and quality assurance",
+      "automationLevel": "full",
+      "approvalRequired": false
+    },
+    "DEVOPS": {
+      "role": "Infrastructure and deployment",
+      "automationLevel": "full",
+      "approvalRequired": false
+    },
+    "SECURITY": {
+      "role": "Security review and compliance",
+      "automationLevel": "assisted",
+      "approvalRequired": true
+    }
+  },
+  "keyPractices": {
+    "planning": "Agent Principal defines goals, Strategy Agent proposes approach",
+    "requirements": "Collaborative refinement between Agent Principal and Strategy Agent",
+    "design": "Design Agent produces specifications, Agent Principal approves",
+    "implementation": "Backend/Frontend agents execute autonomously with quality gates",
+    "testing": "Quality Agent runs comprehensive automated testing",
+    "deployment": "DevOps Agent manages CI/CD with automated rollback",
+    "security": "Security Agent reviews with Agent Principal approval on findings"
+  },
+  "principles": [
+    {
+      "name": "Agent Principal Authority",
+      "description": "The Agent Principal makes all final decisions; agents advise and execute"
+    },
+    {
+      "name": "Automation by Default",
+      "description": "Automate everything possible; manual steps are exceptions"
+    },
+    {
+      "name": "Approval Gates for Strategy",
+      "description": "Strategic decisions require explicit Agent Principal approval"
+    },
+    {
+      "name": "Autonomous Execution",
+      "description": "Implementation agents execute without waiting for approval"
+    },
+    {
+      "name": "Continuous Validation",
+      "description": "Quality gates validate work at each phase transition"
+    },
+    {
+      "name": "Integrated Deliverables",
+      "description": "All outputs tracked in state.json for traceability"
+    }
+  ],
+  "improvementCycles": {
+    "description": "Iterative improvement for existing codebases",
+    "targets": ["security", "quality", "performance", "techdebt", "documentation", "dependencies"],
+    "scopes": {
+      "quick": {
+        "description": "Small effort items only",
+        "maxItems": 5,
+        "maxEffort": "small"
+      },
+      "sprint": {
+        "description": "Sprint-sized batch",
+        "maxItems": 10,
+        "maxEffort": "medium"
+      },
+      "full": {
+        "description": "Comprehensive improvement",
+        "maxItems": null,
+        "maxEffort": "large"
+      }
+    },
+    "workflow": [
+      "Load audit findings",
+      "Filter by target and scope",
+      "Create improvement plan",
+      "Execute fixes sequentially",
+      "Verify each fix",
+      "Update state and scores",
+      "Report results"
+    ]
+  },
+  "existingStatusValues": {
+    "existing": "Phase deliverables exist and are current",
+    "partial": "Some deliverables exist, others missing",
+    "legacy": "Exists but needs modernization",
+    "missing": "Phase not addressed in codebase",
+    "needs-update": "Exists but out of date"
+  },
+  "workflowStages": [
+    {
+      "stage": "Initiate",
+      "description": "Agent Principal defines project, Strategy Agent refines",
+      "agents": ["STRATEGY"],
+      "approvalRequired": true
+    },
+    {
+      "stage": "Design",
+      "description": "Design Agent creates specifications from requirements",
+      "agents": ["DESIGN", "STRATEGY"],
+      "approvalRequired": true
+    },
+    {
+      "stage": "Architect",
+      "description": "Architecture Agent designs system, Security Agent reviews",
+      "agents": ["ARCHITECTURE", "SECURITY"],
+      "approvalRequired": false
+    },
+    {
+      "stage": "Build",
+      "description": "Backend and Frontend agents implement in parallel",
+      "agents": ["BACKEND", "FRONTEND"],
+      "approvalRequired": false
+    },
+    {
+      "stage": "Validate",
+      "description": "Quality Agent tests, Security Agent scans",
+      "agents": ["QUALITY", "SECURITY"],
+      "approvalRequired": false
+    },
+    {
+      "stage": "Ship",
+      "description": "DevOps Agent deploys with monitoring",
+      "agents": ["DEVOPS"],
+      "approvalRequired": false
+    },
+    {
+      "stage": "Operate",
+      "description": "DevOps Agent monitors, all agents support maintenance",
+      "agents": ["DEVOPS", "QUALITY", "SECURITY"],
+      "approvalRequired": false
+    }
+  ],
+  "qualityGates": [
+    {
+      "gate": "requirements-complete",
+      "trigger": "Before Phase 2 (Design)",
+      "checks": ["User stories defined", "MVP scope documented", "Success metrics set"]
+    },
+    {
+      "gate": "design-approved",
+      "trigger": "Before Phase 3 (Architecture)",
+      "checks": ["Wireframes complete", "Design system defined", "Agent Principal approved"]
+    },
+    {
+      "gate": "architecture-ready",
+      "trigger": "Before Phase 4 (Backend)",
+      "checks": ["Database schema defined", "API contracts documented", "Security reviewed"]
+    },
+    {
+      "gate": "implementation-complete",
+      "trigger": "Before Phase 6 (Testing)",
+      "checks": ["All features implemented", "Unit tests passing", "No critical bugs"]
+    },
+    {
+      "gate": "release-ready",
+      "trigger": "Before Phase 7 (Deployment)",
+      "checks": ["All tests passing", "Security scan clean", "Performance acceptable"]
+    },
+    {
+      "gate": "launch-approved",
+      "trigger": "Before production deployment",
+      "checks": ["Staging validated", "Monitoring configured", "Rollback ready"]
+    }
+  ],
+  "slashCommands": [
+    {
+      "command": "/APDF_init",
+      "description": "Initialize a new project with Agent Principal workflow",
+      "mode": "greenfield"
+    },
+    {
+      "command": "/APDF_onboard",
+      "description": "Onboard an existing codebase to Agent Principal workflow",
+      "mode": "existing"
+    },
+    {
+      "command": "/APDF_audit",
+      "description": "Run audit on codebase (security, quality, architecture, etc.)",
+      "usage": "/APDF_audit [category]",
+      "mode": "existing"
+    },
+    {
+      "command": "/APDF_improve",
+      "description": "Run targeted improvement cycle",
+      "usage": "/APDF_improve [target] [scope]",
+      "mode": "existing"
+    },
+    {
+      "command": "/APDF_phase",
+      "description": "Start or view a specific phase",
+      "usage": "/APDF_phase <number>",
+      "mode": "both"
+    },
+    {
+      "command": "/APDF_step",
+      "description": "Execute a specific step",
+      "usage": "/APDF_step <stepId>",
+      "mode": "both"
+    },
+    {
+      "command": "/APDF_status",
+      "description": "View current progress and next actions",
+      "mode": "both"
+    },
+    {
+      "command": "/APDF_next",
+      "description": "Advance to the next pending step",
+      "mode": "greenfield"
+    },
+    {
+      "command": "/APDF_agent",
+      "description": "Invoke a specific agent for a task",
+      "usage": "/APDF_agent <agentId> <task>",
+      "mode": "both"
+    },
+    {
+      "command": "/APDF_deliver",
+      "description": "Generate or view a deliverable",
+      "usage": "/APDF_deliver <deliverableName>",
+      "mode": "both"
+    },
+    {
+      "command": "/APDF_approve",
+      "description": "Approve a pending decision or deliverable",
+      "mode": "both"
+    },
+    {
+      "command": "/APDF_gate",
+      "description": "Run quality gate checks",
+      "usage": "/APDF_gate <gateName>",
+      "mode": "both"
+    }
+  ],
+  "includedStepIds": [
+    "1.1", "1.2", "1.3", "1.4", "1.5", "1.7", "1.8", "1.9", "1.10",
+    "2.1", "2.2", "2.3", "2.4", "2.5", "2.6",
+    "3.1", "3.2", "3.3", "3.4", "3.5", "3.6", "3.7",
+    "4.1", "4.2", "4.3", "4.4", "4.5", "4.6", "4.7",
+    "5.1", "5.2", "5.3", "5.4", "5.5", "5.6", "5.7",
+    "6.1", "6.2", "6.3", "6.4", "6.5", "6.6", "6.7", "6.8",
+    "7.1", "7.2", "7.3", "7.4", "7.5", "7.6", "7.7",
+    "8.1", "8.3", "8.4", "8.5",
+    "9.2", "9.3", "9.4", "9.5", "9.6", "9.7", "9.8", "9.9", "9.10", "9.11"
+  ],
+  "excludedStepIds": [
+    "1.6",
+    "1.11",
+    "1.12",
+    "8.2",
+    "9.1",
+    "9.12",
+    "9.13",
+    "9.14"
+  ],
+  "excludedStepReasons": {
+    "1.6": "Waterfall-specific timeline/budget planning - replaced by iterative approach",
+    "1.11": "Scrum-specific backlog ceremonies - not applicable",
+    "1.12": "Kanban-specific board setup - not applicable",
+    "8.2": "Training materials for team - solo operator",
+    "9.1": "Sprint retrospectives - not applicable",
+    "9.12": "Team scaling - solo operator",
+    "9.13": "Knowledge transfer - solo operator",
+    "9.14": "Team ceremonies - solo operator"
+  },
+  "additionalConfig": {
+    "recommendedSprintLength": null,
+    "requiresBacklog": false,
+    "usesVelocity": false,
+    "hasIterations": false,
+    "formalApprovals": false,
+    "changeControlRequired": false,
+    "automationRequired": true,
+    "observabilityRequired": true,
+    "featureFlagsRecommended": true,
+    "trunkBasedDevelopment": true,
+    "agentPrincipalMode": true,
+    "stateTracking": true,
+    "integratedDeliverables": true
+  }
+}

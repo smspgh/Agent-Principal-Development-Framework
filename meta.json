@@ -1,0 +1,371 @@
+{
+  "title": "Agent Principal Development Framework",
+  "description": "A comprehensive, modular guide for solo operators (Agent Principals) to develop web applications using AI agents. Optimized for DevOps/CD methodology with specialized agents replacing traditional team roles.",
+  "version": "3.0",
+  "lastUpdated": "2026-01",
+  "mode": "agent-principal",
+  "schema": {
+    "structure": {
+      "agents": "./agents/*.json",
+      "phases": "./phases/*.json",
+      "methodologies": "./methodologies/*.json",
+      "commands": "./.claude/commands/*.md",
+      "state": "./state.json"
+    },
+    "agentFiles": [
+      "strategy.json",
+      "design.json",
+      "architecture.json",
+      "backend.json",
+      "frontend.json",
+      "quality.json",
+      "devops.json",
+      "security.json"
+    ],
+    "phaseFiles": [
+      "1-discovery.json",
+      "2-design.json",
+      "3-architecture.json",
+      "4-backend.json",
+      "5-frontend.json",
+      "6-testing.json",
+      "7-deployment.json",
+      "8-documentation.json",
+      "9-operations.json"
+    ],
+    "methodologyFiles": [
+      "agent-principal-devops.json",
+      "waterfall.json",
+      "scrum.json",
+      "kanban.json",
+      "devops.json"
+    ],
+    "commandFiles": [
+      "APDF_init.md",
+      "APDF_onboard.md",
+      "APDF_audit.md",
+      "APDF_improve.md",
+      "APDF_phase.md",
+      "APDF_step.md",
+      "APDF_status.md",
+      "APDF_next.md",
+      "APDF_agent.md",
+      "APDF_deliver.md",
+      "APDF_approve.md",
+      "APDF_gate.md"
+    ]
+  },
+  "agentPrincipal": {
+    "description": "The Agent Principal is a solo operator who orchestrates specialized AI agents to execute software development. The AP makes strategic decisions, approves key deliverables, and guides the overall direction while agents handle domain-specific execution.",
+    "responsibilities": [
+      "Define project vision and goals",
+      "Approve strategic decisions and designs",
+      "Review security findings and compliance",
+      "Make trade-off decisions",
+      "Guide overall product direction"
+    ],
+    "agentTeam": {
+      "STRATEGY": {
+        "name": "Strategy Agent",
+        "automationLevel": "assisted",
+        "approvalRequired": true,
+        "primaryPhases": [1]
+      },
+      "DESIGN": {
+        "name": "Design Agent",
+        "automationLevel": "assisted",
+        "approvalRequired": true,
+        "primaryPhases": [2]
+      },
+      "ARCHITECTURE": {
+        "name": "Architecture Agent",
+        "automationLevel": "full",
+        "approvalRequired": false,
+        "primaryPhases": [3]
+      },
+      "BACKEND": {
+        "name": "Backend Agent",
+        "automationLevel": "full",
+        "approvalRequired": false,
+        "primaryPhases": [4]
+      },
+      "FRONTEND": {
+        "name": "Frontend Agent",
+        "automationLevel": "full",
+        "approvalRequired": false,
+        "primaryPhases": [5]
+      },
+      "QUALITY": {
+        "name": "Quality Agent",
+        "automationLevel": "full",
+        "approvalRequired": false,
+        "primaryPhases": [6]
+      },
+      "DEVOPS": {
+        "name": "DevOps Agent",
+        "automationLevel": "full",
+        "approvalRequired": false,
+        "primaryPhases": [7, 9]
+      },
+      "SECURITY": {
+        "name": "Security Agent",
+        "automationLevel": "assisted",
+        "approvalRequired": true,
+        "primaryPhases": [1, 6]
+      }
+    }
+  },
+  "roleToAgentMapping": {
+    "PRODUCT_OWNER": "STRATEGY",
+    "BUSINESS_ANALYST": "STRATEGY",
+    "STAKEHOLDERS": "AGENT_PRINCIPAL",
+    "MARKETING": "STRATEGY",
+    "UX_DESIGNER": "DESIGN",
+    "UI_DESIGNER": "DESIGN",
+    "UX_RESEARCHER": "DESIGN",
+    "VISUAL_DESIGNER": "DESIGN",
+    "BRAND_DESIGNER": "DESIGN",
+    "INFO_ARCHITECT": "DESIGN",
+    "SOLUTIONS_ARCHITECT": "ARCHITECTURE",
+    "TECH_LEAD": "ARCHITECTURE",
+    "DBA": "ARCHITECTURE",
+    "DATA_ENGINEER": "ARCHITECTURE",
+    "BE_DEV": "BACKEND",
+    "SENIOR_DEV": "BACKEND",
+    "FULLSTACK_DEV": "BACKEND",
+    "FE_DEV": "FRONTEND",
+    "UI_DEV": "FRONTEND",
+    "MOBILE_DEV": "FRONTEND",
+    "QA_ENGINEER": "QUALITY",
+    "QA_AUTOMATION": "QUALITY",
+    "PERF_ENGINEER": "QUALITY",
+    "A11Y_SPECIALIST": "QUALITY",
+    "DEVOPS": "DEVOPS",
+    "PLATFORM_ENGINEER": "DEVOPS",
+    "SRE": "DEVOPS",
+    "CLOUD_ARCHITECT": "DEVOPS",
+    "SYS_ADMIN": "DEVOPS",
+    "SEC_ENGINEER": "SECURITY",
+    "DPO": "SECURITY",
+    "LEGAL": "SECURITY",
+    "EXT_AUDITOR": "EXTERNAL",
+    "BETA_USERS": "EXTERNAL",
+    "TECH_WRITER": "BACKEND",
+    "SCRUM_MASTER": "SKIP",
+    "PROJECT_MANAGER": "AGENT_PRINCIPAL",
+    "INCIDENT_COMMANDER": "DEVOPS",
+    "DEV_TEAM": "BACKEND",
+    "DATA_ANALYST": "STRATEGY",
+    "ML_ENGINEER": "BACKEND",
+    "SUPPORT": "SKIP",
+    "HR": "SKIP",
+    "CAB": "SKIP",
+    "SEO_SPECIALIST": "FRONTEND"
+  },
+  "qualityGates": [
+    {
+      "id": "requirements-complete",
+      "name": "Requirements Complete",
+      "triggerPhase": 2,
+      "checks": [
+        {"check": "User stories defined", "deliverable": "user-stories"},
+        {"check": "MVP scope documented", "deliverable": "mvp-scope"},
+        {"check": "Success metrics set", "step": "1.1"}
+      ]
+    },
+    {
+      "id": "design-approved",
+      "name": "Design Approved",
+      "triggerPhase": 3,
+      "checks": [
+        {"check": "Wireframes complete", "deliverable": "wireframes"},
+        {"check": "Design system defined", "deliverable": "design-system"},
+        {"check": "Agent Principal approved", "approval": "design-system"}
+      ]
+    },
+    {
+      "id": "architecture-ready",
+      "name": "Architecture Ready",
+      "triggerPhase": 4,
+      "checks": [
+        {"check": "Database schema defined", "deliverable": "database-schema"},
+        {"check": "API contracts documented", "deliverable": "api-specification"},
+        {"check": "Security reviewed", "step": "1.9"}
+      ]
+    },
+    {
+      "id": "implementation-complete",
+      "name": "Implementation Complete",
+      "triggerPhase": 6,
+      "checks": [
+        {"check": "All features implemented", "phases": [4, 5]},
+        {"check": "Unit tests passing", "deliverable": "unit-tests"},
+        {"check": "No critical bugs", "blockers": "critical"}
+      ]
+    },
+    {
+      "id": "release-ready",
+      "name": "Release Ready",
+      "triggerPhase": 7,
+      "checks": [
+        {"check": "All tests passing", "phase": 6},
+        {"check": "Security scan clean", "deliverable": "security-scan"},
+        {"check": "Performance acceptable", "deliverable": "performance-tests"}
+      ]
+    },
+    {
+      "id": "launch-approved",
+      "name": "Launch Approved",
+      "triggerPhase": "production",
+      "checks": [
+        {"check": "Staging validated", "step": "7.4"},
+        {"check": "Monitoring configured", "step": "7.7"},
+        {"check": "Rollback ready", "deliverable": "rollback-automation"}
+      ]
+    }
+  ],
+  "glossary": {
+    "AgentPrincipal": {
+      "term": "Agent Principal",
+      "definition": "A solo operator who orchestrates AI agents to build software. The AP provides strategic direction and approval while agents handle domain-specific execution."
+    },
+    "ADR": {
+      "term": "Architecture Decision Record",
+      "definition": "A document capturing an important architectural decision along with its context and consequences."
+    },
+    "CFD": {
+      "term": "Cumulative Flow Diagram",
+      "definition": "A visualization showing the quantity of work items in different states over time, used to identify bottlenecks."
+    },
+    "DAST": {
+      "term": "Dynamic Application Security Testing",
+      "definition": "Testing a running application for security vulnerabilities by simulating attacks."
+    },
+    "DoD": {
+      "term": "Definition of Done",
+      "definition": "A shared understanding of the criteria that must be met for work to be considered complete."
+    },
+    "IaC": {
+      "term": "Infrastructure as Code",
+      "definition": "Managing and provisioning infrastructure through machine-readable configuration files rather than manual processes."
+    },
+    "MTTD": {
+      "term": "Mean Time To Detection",
+      "definition": "The average time it takes to detect an incident or issue after it occurs."
+    },
+    "MTTR": {
+      "term": "Mean Time To Recovery",
+      "definition": "The average time it takes to restore service after an incident is detected."
+    },
+    "QualityGate": {
+      "term": "Quality Gate",
+      "definition": "A checkpoint that validates required conditions before proceeding to the next phase."
+    },
+    "RPO": {
+      "term": "Recovery Point Objective",
+      "definition": "The maximum acceptable amount of data loss measured in time."
+    },
+    "RTO": {
+      "term": "Recovery Time Objective",
+      "definition": "The target time within which a service must be restored after a disaster."
+    },
+    "SAST": {
+      "term": "Static Application Security Testing",
+      "definition": "Analyzing source code or binaries for security vulnerabilities without executing the application."
+    },
+    "SBOM": {
+      "term": "Software Bill of Materials",
+      "definition": "A comprehensive inventory of all software components, libraries, and dependencies in an application."
+    },
+    "SLI": {
+      "term": "Service Level Indicator",
+      "definition": "A quantitative measure of some aspect of the level of service being provided."
+    },
+    "SLO": {
+      "term": "Service Level Objective",
+      "definition": "A target value or range for a service level indicator."
+    }
+  },
+  "toolSuggestions": {
+    "projectManagement": {
+      "description": "Tools for tracking work and progress",
+      "tools": ["Linear", "GitHub Issues", "Notion"],
+      "agentPrincipalNote": "state.json provides built-in tracking"
+    },
+    "design": {
+      "description": "UI/UX design tools - Design Agent can generate specifications",
+      "tools": ["Figma", "v0.dev", "Claude Artifacts"]
+    },
+    "versionControl": {
+      "description": "Source code management",
+      "tools": ["GitHub", "GitLab"]
+    },
+    "cicd": {
+      "description": "CI/CD automation - DevOps Agent configures",
+      "tools": ["GitHub Actions", "GitLab CI"]
+    },
+    "infrastructure": {
+      "description": "IaC tools - DevOps Agent generates",
+      "tools": ["Terraform", "Pulumi", "AWS CDK"]
+    },
+    "monitoring": {
+      "description": "Observability - DevOps Agent configures",
+      "tools": ["Grafana", "Datadog", "New Relic"]
+    },
+    "security": {
+      "description": "Security scanning - Security Agent runs",
+      "tools": ["Snyk", "GitHub Dependabot", "Trivy"]
+    },
+    "testing": {
+      "description": "Testing frameworks - Quality Agent uses",
+      "tools": ["Vitest", "Playwright", "k6"]
+    }
+  },
+  "references": {
+    "agentPrincipal": {
+      "claudeCode": {
+        "name": "Claude Code Documentation",
+        "url": "https://docs.anthropic.com/claude-code",
+        "description": "Official Claude Code CLI documentation"
+      }
+    },
+    "security": {
+      "owaspTop10": {
+        "name": "OWASP Top 10",
+        "url": "https://owasp.org/www-project-top-ten/",
+        "description": "Top 10 most critical web application security risks"
+      }
+    },
+    "accessibility": {
+      "wcag": {
+        "name": "WCAG 2.2 Guidelines",
+        "url": "https://www.w3.org/WAI/standards-guidelines/wcag/",
+        "description": "Web Content Accessibility Guidelines"
+      }
+    },
+    "architecture": {
+      "twelveFactorApp": {
+        "name": "The Twelve-Factor App",
+        "url": "https://12factor.net/",
+        "description": "Methodology for building modern, scalable SaaS applications"
+      }
+    },
+    "devops": {
+      "doraMetrics": {
+        "name": "DORA Metrics",
+        "url": "https://dora.dev/",
+        "description": "DevOps Research and Assessment metrics"
+      }
+    }
+  },
+  "customization": {
+    "instructions": "This framework is designed to be customizable. Agents can be extended with additional capabilities, phases can be modified, and the methodology can be adapted to specific project needs.",
+    "extensionPoints": [
+      "Add custom agent definitions in agents/",
+      "Modify phase steps for project-specific needs",
+      "Create custom slash commands in .claude/commands/",
+      "Extend quality gates in methodology file",
+      "Add project-specific deliverable types"
+    ]
+  }
+}

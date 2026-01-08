@@ -1,0 +1,137 @@
+{
+  "methodologyId": "DEVOPS_CD",
+  "name": "DevOps / Continuous Delivery",
+  "description": "A methodology emphasizing collaboration between development and operations, automation, continuous integration/delivery, and rapid, reliable releases. Can be combined with Scrum or Kanban.",
+  "characteristics": [
+    "Automation-first mindset",
+    "Continuous Integration and Delivery",
+    "Infrastructure as Code",
+    "Observability and monitoring",
+    "Blameless post-mortems and learning culture"
+  ],
+  "bestFor": [
+    "SaaS and cloud-native applications",
+    "Teams shipping frequently (daily/weekly)",
+    "Organizations with mature automation",
+    "Products requiring high availability",
+    "Teams practicing trunk-based development"
+  ],
+  "notIdealFor": [
+    "Teams without automation capabilities",
+    "Heavily regulated environments with manual gates",
+    "Legacy systems without test coverage",
+    "Organizations resistant to cultural change"
+  ],
+  "primaryRoles": ["DEVOPS", "SRE", "PLATFORM_ENGINEER", "TECH_LEAD"],
+  "supportingRoles": ["DEV_TEAM", "SEC_ENGINEER", "QA_AUTOMATION"],
+  "keyPractices": {
+    "planning": "Small batches, feature flags for incomplete work",
+    "requirements": "Vertical slices deployable independently",
+    "changeManagement": "Automated pipelines, progressive rollouts",
+    "testing": "Shift-left testing, automated at all levels",
+    "documentation": "Documentation as code, runbooks"
+  },
+  "principles": [
+    {
+      "name": "Automate Everything",
+      "description": "Build, test, deploy, and infrastructure should be automated"
+    },
+    {
+      "name": "Ship Small, Ship Often",
+      "description": "Small changes reduce risk and enable fast feedback"
+    },
+    {
+      "name": "You Build It, You Run It",
+      "description": "Teams own their services in production"
+    },
+    {
+      "name": "Measure Everything",
+      "description": "Decisions driven by metrics and observability"
+    },
+    {
+      "name": "Embrace Failure",
+      "description": "Learn from incidents through blameless post-mortems"
+    }
+  ],
+  "doraMetrics": [
+    {
+      "name": "Deployment Frequency",
+      "elite": "On-demand (multiple per day)",
+      "high": "Weekly to monthly",
+      "medium": "Monthly to every 6 months",
+      "low": "Less than once per 6 months"
+    },
+    {
+      "name": "Lead Time for Changes",
+      "elite": "Less than 1 hour",
+      "high": "1 day to 1 week",
+      "medium": "1 week to 1 month",
+      "low": "More than 6 months"
+    },
+    {
+      "name": "Mean Time to Recovery",
+      "elite": "Less than 1 hour",
+      "high": "Less than 1 day",
+      "medium": "1 day to 1 week",
+      "low": "More than 6 months"
+    },
+    {
+      "name": "Change Failure Rate",
+      "elite": "0-15%",
+      "high": "16-30%",
+      "medium": "16-30%",
+      "low": "More than 30%"
+    }
+  ],
+  "pipelineStages": [
+    {
+      "stage": "Commit",
+      "activities": ["Compile", "Unit tests", "Static analysis", "Lint"]
+    },
+    {
+      "stage": "Build",
+      "activities": ["Build artifacts", "Container image", "SBOM generation"]
+    },
+    {
+      "stage": "Test",
+      "activities": ["Integration tests", "Security scans", "Contract tests"]
+    },
+    {
+      "stage": "Stage",
+      "activities": ["Deploy to staging", "E2E tests", "Performance tests"]
+    },
+    {
+      "stage": "Production",
+      "activities": ["Progressive rollout", "Smoke tests", "Monitoring"]
+    }
+  ],
+  "includedStepIds": [
+    "1.1", "1.2", "1.3", "1.4", "1.5", "1.7", "1.8", "1.9", "1.10",
+    "2.1", "2.2", "2.3", "2.4", "2.5", "2.6",
+    "3.1", "3.2", "3.3", "3.4", "3.5", "3.6", "3.7",
+    "4.1", "4.2", "4.3", "4.4", "4.5", "4.6", "4.7",
+    "5.1", "5.2", "5.3", "5.4", "5.5", "5.6", "5.7",
+    "6.1", "6.2", "6.3", "6.4", "6.5", "6.6", "6.7", "6.8",
+    "7.1", "7.2", "7.3", "7.4", "7.5", "7.6", "7.7",
+    "8.1", "8.3", "8.4", "8.5",
+    "9.2", "9.3", "9.4", "9.5", "9.6", "9.7", "9.8", "9.9", "9.10", "9.11"
+  ],
+  "excludedStepIds": [
+    "1.6", "1.11", "1.12",
+    "8.2",
+    "9.1", "9.12", "9.13", "9.14"
+  ],
+  "additionalConfig": {
+    "recommendedSprintLength": null,
+    "requiresBacklog": false,
+    "usesVelocity": false,
+    "hasIterations": false,
+    "formalApprovals": false,
+    "changeControlRequired": false,
+    "automationRequired": true,
+    "observabilityRequired": true,
+    "featureFlagsRecommended": true,
+    "trunkBasedDevelopment": true,
+    "combinesWith": ["AGILE_SCRUM", "AGILE_KANBAN"]
+  }
+}

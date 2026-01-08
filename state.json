@@ -1,0 +1,160 @@
+{
+  "projectName": null,
+  "projectDescription": null,
+  "methodology": "AGENT_PRINCIPAL_DEVOPS",
+  "projectMode": null,
+  "createdAt": null,
+  "lastUpdated": null,
+  "onboardedAt": null,
+  "currentPhase": null,
+  "currentStep": null,
+  "agentPrincipal": {
+    "name": null,
+    "preferences": {
+      "approvalMode": "assisted",
+      "autoAdvance": false,
+      "verboseOutput": true
+    }
+  },
+  "codebaseProfile": {
+    "languages": [],
+    "frameworks": [],
+    "buildTools": [],
+    "testingFrameworks": [],
+    "cicd": null,
+    "hosting": null,
+    "repository": null,
+    "entryPoints": [],
+    "keyModules": []
+  },
+  "existingAssets": {
+    "hasTests": false,
+    "testCoverage": null,
+    "hasDocs": false,
+    "hasCI": false,
+    "hasDocker": false,
+    "hasMonitoring": false
+  },
+  "phases": {
+    "1-discovery": {
+      "status": "not_started",
+      "existingStatus": null,
+      "startedAt": null,
+      "completedAt": null,
+      "steps": {}
+    },
+    "2-design": {
+      "status": "not_started",
+      "existingStatus": null,
+      "startedAt": null,
+      "completedAt": null,
+      "steps": {}
+    },
+    "3-architecture": {
+      "status": "not_started",
+      "existingStatus": null,
+      "startedAt": null,
+      "completedAt": null,
+      "steps": {}
+    },
+    "4-backend": {
+      "status": "not_started",
+      "existingStatus": null,
+      "startedAt": null,
+      "completedAt": null,
+      "steps": {}
+    },
+    "5-frontend": {
+      "status": "not_started",
+      "existingStatus": null,
+      "startedAt": null,
+      "completedAt": null,
+      "steps": {}
+    },
+    "6-testing": {
+      "status": "not_started",
+      "existingStatus": null,
+      "startedAt": null,
+      "completedAt": null,
+      "steps": {}
+    },
+    "7-deployment": {
+      "status": "not_started",
+      "existingStatus": null,
+      "startedAt": null,
+      "completedAt": null,
+      "steps": {}
+    },
+    "8-documentation": {
+      "status": "not_started",
+      "existingStatus": null,
+      "startedAt": null,
+      "completedAt": null,
+      "steps": {}
+    },
+    "9-operations": {
+      "status": "not_started",
+      "existingStatus": null,
+      "startedAt": null,
+      "completedAt": null,
+      "steps": {}
+    }
+  },
+  "auditResults": {
+    "lastAuditAt": null,
+    "findings": [],
+    "summary": {
+      "total": 0,
+      "bySeverity": {
+        "high": 0,
+        "medium": 0,
+        "low": 0,
+        "info": 0
+      },
+      "byCategory": {},
+      "byStatus": {
+        "open": 0,
+        "in-progress": 0,
+        "resolved": 0,
+        "wont-fix": 0
+      }
+    },
+    "scores": {
+      "security": null,
+      "quality": null,
+      "architecture": null,
+      "documentation": null,
+      "devops": null,
+      "overall": null
+    }
+  },
+  "techDebt": {
+    "items": [],
+    "totalCount": 0,
+    "byPriority": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "low": 0
+    },
+    "byCategory": {},
+    "estimatedEffort": null
+  },
+  "improvementHistory": [],
+  "currentImprovement": null,
+  "deliverables": [],
+  "decisions": [],
+  "blockers": [],
+  "metrics": {
+    "totalSteps": 0,
+    "completedSteps": 0,
+    "skippedSteps": 0,
+    "existingSteps": 0,
+    "legacySteps": 0,
+    "needsUpdateSteps": 0,
+    "totalTasks": 0,
+    "completedTasks": 0,
+    "improvementCycles": 0,
+    "findingsResolved": 0
+  }
+}

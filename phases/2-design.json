@@ -1,0 +1,124 @@
+{
+  "phaseNumber": 2,
+  "phaseId": "DESIGN",
+  "phaseName": "Design and Prototyping",
+  "description": "Create the user experience and visual design through iterative design exploration and validation.",
+  "primaryAgents": ["DESIGN"],
+  "objectives": [
+    "Define information architecture and navigation",
+    "Create wireframes and validate structure",
+    "Establish visual design system and brand application",
+    "Build and test interactive prototypes",
+    "Obtain Agent Principal approval before development"
+  ],
+  "steps": [
+    {
+      "stepId": "2.1",
+      "stepName": "Create information architecture and user flows",
+      "agentId": "DESIGN",
+      "automationLevel": "assisted",
+      "approvalRequired": true,
+      "description": "Define how content and features are organized and how users navigate through the application.",
+      "tasks": [
+        {"taskId": "2.1.1", "task": "Map all pages, sections, and content of the application", "deliverables": ["Content inventory"]},
+        {"taskId": "2.1.2", "task": "Create hierarchical sitemap diagram", "deliverables": ["Sitemap"]},
+        {"taskId": "2.1.3", "task": "Design user flow diagrams for key journeys", "deliverables": ["User flow diagrams"]},
+        {"taskId": "2.1.4", "task": "Define navigation patterns and wayfinding", "deliverables": ["Navigation design"]},
+        {"taskId": "2.1.5", "task": "Validate information architecture structure", "deliverables": ["IA validation"]}
+      ],
+      "outputs": ["Sitemap", "User flows", "Navigation patterns"],
+      "agentPrompt": "Create a comprehensive information architecture based on user stories and personas. Design clear navigation and user flows for key journeys. Present as structured specifications."
+    },
+    {
+      "stepId": "2.2",
+      "stepName": "Create wireframes and low-fidelity designs",
+      "agentId": "DESIGN",
+      "automationLevel": "assisted",
+      "approvalRequired": true,
+      "description": "Develop initial layouts and structure without visual polish to validate concepts quickly.",
+      "tasks": [
+        {"taskId": "2.2.1", "task": "Create layout specifications for all key screens", "deliverables": ["Layout specs"]},
+        {"taskId": "2.2.2", "task": "Define content hierarchy and placement", "deliverables": ["Content hierarchy document"]},
+        {"taskId": "2.2.3", "task": "Explore multiple layout options for key flows", "deliverables": ["Layout variations"]},
+        {"taskId": "2.2.4", "task": "Review wireframes with Agent Principal", "deliverables": ["Feedback documentation"]},
+        {"taskId": "2.2.5", "task": "Iterate based on feedback before high-fidelity", "deliverables": ["Revised wireframes"]}
+      ],
+      "outputs": ["Wireframes for all key screens", "Content hierarchy"],
+      "agentPrompt": "Generate detailed wireframe specifications in text/markdown format. Describe layout, component placement, and interactions. Provide multiple options for key screens."
+    },
+    {
+      "stepId": "2.3",
+      "stepName": "Design visual identity and design system",
+      "agentId": "DESIGN",
+      "automationLevel": "assisted",
+      "approvalRequired": true,
+      "description": "Establish the visual language and systematic design components for the application.",
+      "tasks": [
+        {"taskId": "2.3.1", "task": "Define color palette (primary, secondary, semantic colors)", "deliverables": ["Color palette"]},
+        {"taskId": "2.3.2", "task": "Select and pair typography (headings, body, monospace)", "deliverables": ["Typography system"]},
+        {"taskId": "2.3.3", "task": "Define iconography style and icon set", "deliverables": ["Icon library"]},
+        {"taskId": "2.3.4", "task": "Define spacing scale and grid system", "deliverables": ["Spacing/grid system"]},
+        {"taskId": "2.3.5", "task": "Create design tokens for systematic implementation", "deliverables": ["Design tokens"]},
+        {"taskId": "2.3.6", "task": "Document design system specifications", "deliverables": ["Design system documentation"]}
+      ],
+      "outputs": ["Design system", "Design tokens", "Component library"],
+      "agentPrompt": "Create a complete design system specification including colors, typography, spacing, and component patterns. Output as design tokens (CSS variables or JSON) ready for implementation."
+    },
+    {
+      "stepId": "2.4",
+      "stepName": "Create high-fidelity UI specifications",
+      "agentId": "DESIGN",
+      "automationLevel": "assisted",
+      "approvalRequired": true,
+      "description": "Design detailed specifications for all screens and states.",
+      "tasks": [
+        {"taskId": "2.4.1", "task": "Create detailed specifications for all screens", "deliverables": ["Screen specs"]},
+        {"taskId": "2.4.2", "task": "Define component library with all UI elements", "deliverables": ["UI component library"]},
+        {"taskId": "2.4.3", "task": "Specify designs for all breakpoints (mobile, tablet, desktop)", "deliverables": ["Responsive designs"]},
+        {"taskId": "2.4.4", "task": "Include all states (empty, loading, error, success)", "deliverables": ["State variations"]},
+        {"taskId": "2.4.5", "task": "Specify micro-interactions and transitions", "deliverables": ["Interaction specifications"]}
+      ],
+      "outputs": ["Complete UI specifications", "Component library", "Interaction specs"],
+      "agentPrompt": "Generate comprehensive UI specifications for each screen. Include component details, responsive behavior, and all states. Output in a format the Frontend Agent can implement directly."
+    },
+    {
+      "stepId": "2.5",
+      "stepName": "Build and test interactive prototype",
+      "agentId": "DESIGN",
+      "automationLevel": "assisted",
+      "approvalRequired": true,
+      "description": "Create clickable prototypes and validate designs.",
+      "tasks": [
+        {"taskId": "2.5.1", "task": "Define prototype flow and interactions", "deliverables": ["Interactive prototype spec"]},
+        {"taskId": "2.5.2", "task": "Specify realistic interactions and transitions", "deliverables": ["Prototype with interactions"]},
+        {"taskId": "2.5.3", "task": "Create usability test scenarios", "deliverables": ["Usability test scenarios"]},
+        {"taskId": "2.5.4", "task": "Document usability findings and issues", "deliverables": ["Usability report"]},
+        {"taskId": "2.5.5", "task": "Iterate on designs based on findings", "deliverables": ["Revised designs"]}
+      ],
+      "outputs": ["Validated prototype", "Usability findings", "Design iterations"],
+      "agentPrompt": "Create prototype specifications that can be implemented as a working prototype. Define test scenarios for key flows. Document any usability concerns for Agent Principal review."
+    },
+    {
+      "stepId": "2.6",
+      "stepName": "Design review and Agent Principal approval",
+      "agentId": "DESIGN",
+      "automationLevel": "assisted",
+      "approvalRequired": true,
+      "description": "Present designs for formal review and obtain approval to proceed to development.",
+      "tasks": [
+        {"taskId": "2.6.1", "task": "Prepare design presentation summary", "deliverables": ["Design presentation"]},
+        {"taskId": "2.6.2", "task": "Conduct accessibility review of designs", "deliverables": ["Accessibility audit"]},
+        {"taskId": "2.6.3", "task": "Document feedback and required changes", "deliverables": ["Feedback log"]},
+        {"taskId": "2.6.4", "task": "Make revisions based on feedback", "deliverables": ["Final designs"]},
+        {"taskId": "2.6.5", "task": "Obtain formal sign-off to proceed", "deliverables": ["Approval documentation"]}
+      ],
+      "outputs": ["Approved designs", "Accessibility review", "Design handoff package"],
+      "agentPrompt": "Prepare a comprehensive design summary for Agent Principal approval. Include accessibility considerations. Package all design assets for handoff to development agents."
+    }
+  ],
+  "qualityGate": {
+    "name": "design-approved",
+    "requiredDeliverables": ["wireframes", "design-system", "ui-specifications"],
+    "requiredApprovals": ["design-system", "ui-specifications"]
+  }
+}

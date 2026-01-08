@@ -1,0 +1,78 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '[Hook] Validating command safety...'",
+            "description": "Pre-execution safety check for bash commands"
+          }
+        ]
+      },
+      {
+        "matcher": "Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '[Hook] File write detected - will update state tracking'",
+            "description": "Track file creation/modification for deliverables"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '[Hook] Command completed'",
+            "description": "Post-execution logging"
+          }
+        ]
+      }
+    ],
+    "Notification": [
+      {
+        "type": "command",
+        "command": "echo '[Notification] Task completed'",
+        "description": "Notify on task completion"
+      }
+    ]
+  },
+  "agentPrincipal": {
+    "enabled": true,
+    "autoTrackDeliverables": true,
+    "qualityGatesEnabled": true,
+    "approvalWorkflow": {
+      "strategyAgent": "assisted",
+      "designAgent": "assisted",
+      "securityAgent": "assisted",
+      "implementationAgents": "full"
+    },
+    "notifications": {
+      "onPhaseComplete": true,
+      "onGateFail": true,
+      "onApprovalNeeded": true
+    }
+  },
+  "permissions": {
+    "allow": [
+      "Bash(npm:*)",
+      "Bash(pnpm:*)",
+      "Bash(git:*)",
+      "Bash(mkdir:*)",
+      "Bash(ls:*)",
+      "Edit",
+      "Write",
+      "Read"
+    ],
+    "deny": [
+      "Bash(rm -rf /)",
+      "Bash(*--force*)",
+      "Bash(*sudo*)"
+    ]
+  }
+}

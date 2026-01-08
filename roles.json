@@ -1,0 +1,711 @@
+{
+  "description": "Role definitions for web application development teams",
+  "version": "2.0",
+  "categories": [
+    {
+      "categoryId": "AGILE",
+      "categoryName": "Agile & Process",
+      "description": "Roles focused on Agile methodology facilitation and process management"
+    },
+    {
+      "categoryId": "PRODUCT",
+      "categoryName": "Product",
+      "description": "Roles focused on product vision, strategy, and user value"
+    },
+    {
+      "categoryId": "MANAGEMENT",
+      "categoryName": "Management",
+      "description": "Roles focused on project coordination, governance, and resource management"
+    },
+    {
+      "categoryId": "ANALYSIS",
+      "categoryName": "Analysis",
+      "description": "Roles focused on requirements gathering and business analysis"
+    },
+    {
+      "categoryId": "DESIGN",
+      "categoryName": "Design",
+      "description": "Roles focused on user experience, visual design, and information architecture"
+    },
+    {
+      "categoryId": "TECHNICAL",
+      "categoryName": "Technical Leadership",
+      "description": "Roles focused on technical direction and architecture"
+    },
+    {
+      "categoryId": "DEVELOPMENT",
+      "categoryName": "Development",
+      "description": "Roles focused on building the application"
+    },
+    {
+      "categoryId": "QUALITY",
+      "categoryName": "Quality Assurance",
+      "description": "Roles focused on testing, quality, and performance"
+    },
+    {
+      "categoryId": "OPERATIONS",
+      "categoryName": "Operations & Infrastructure",
+      "description": "Roles focused on deployment, infrastructure, and reliability"
+    },
+    {
+      "categoryId": "SECURITY",
+      "categoryName": "Security",
+      "description": "Roles focused on application and infrastructure security"
+    },
+    {
+      "categoryId": "DATA",
+      "categoryName": "Data",
+      "description": "Roles focused on databases, data pipelines, and analytics"
+    },
+    {
+      "categoryId": "COMPLIANCE",
+      "categoryName": "Legal & Compliance",
+      "description": "Roles focused on regulatory compliance and legal requirements"
+    },
+    {
+      "categoryId": "DOCUMENTATION",
+      "categoryName": "Documentation",
+      "description": "Roles focused on creating and maintaining documentation"
+    },
+    {
+      "categoryId": "MARKETING",
+      "categoryName": "Marketing",
+      "description": "Roles focused on go-to-market and user acquisition"
+    },
+    {
+      "categoryId": "BUSINESS",
+      "categoryName": "Business",
+      "description": "Stakeholders and business-focused roles"
+    },
+    {
+      "categoryId": "TESTING",
+      "categoryName": "User Testing",
+      "description": "Roles involved in user acceptance and beta testing"
+    }
+  ],
+  "roles": [
+    {
+      "roleId": "SCRUM_MASTER",
+      "roleName": "Scrum Master",
+      "category": "AGILE",
+      "roleDescription": "Facilitator for the Scrum team, removing impediments, coaching on Agile practices, and ensuring adherence to Scrum processes.",
+      "responsibilities": [
+        "Facilitate Scrum ceremonies (standups, planning, reviews, retrospectives)",
+        "Remove blockers and impediments for the team",
+        "Coach team on Agile principles and practices",
+        "Shield team from external interruptions",
+        "Track and improve team velocity and health"
+      ],
+      "typicalSkills": ["Agile methodologies", "Facilitation", "Conflict resolution", "Coaching"]
+    },
+    {
+      "roleId": "PRODUCT_OWNER",
+      "roleName": "Product Owner",
+      "category": "PRODUCT",
+      "roleDescription": "Responsible for defining the product vision, roadmap, and prioritizing the backlog based on business value and user needs.",
+      "responsibilities": [
+        "Define and communicate product vision",
+        "Maintain and prioritize product backlog",
+        "Write and refine user stories with acceptance criteria",
+        "Make trade-off decisions on scope and priority",
+        "Represent stakeholder and user interests"
+      ],
+      "typicalSkills": ["Product strategy", "User research", "Prioritization frameworks", "Stakeholder management"]
+    },
+    {
+      "roleId": "PROJECT_MANAGER",
+      "roleName": "Project Manager",
+      "category": "MANAGEMENT",
+      "roleDescription": "Manages timeline, budget, resources, scope, and mitigates risks. Primary coordination role in Waterfall methodologies.",
+      "responsibilities": [
+        "Create and maintain project plans and schedules",
+        "Manage budget and resource allocation",
+        "Identify and mitigate project risks",
+        "Coordinate cross-functional teams",
+        "Report status to stakeholders"
+      ],
+      "typicalSkills": ["Project planning", "Risk management", "Budget management", "Communication"]
+    },
+    {
+      "roleId": "TECH_LEAD",
+      "roleName": "Technical Lead",
+      "category": "TECHNICAL",
+      "roleDescription": "Oversees technical decisions, code quality, architecture alignment, and guides the development team on implementation.",
+      "responsibilities": [
+        "Make technical design decisions",
+        "Conduct code reviews and ensure quality",
+        "Mentor and guide developers",
+        "Coordinate with architects on implementation",
+        "Resolve technical blockers"
+      ],
+      "typicalSkills": ["Software architecture", "Code review", "Technical mentoring", "System design"]
+    },
+    {
+      "roleId": "BUSINESS_ANALYST",
+      "roleName": "Business Analyst",
+      "category": "ANALYSIS",
+      "roleDescription": "Bridges the gap between business stakeholders and technical teams, gathering requirements and translating them into specifications.",
+      "responsibilities": [
+        "Gather and document business requirements",
+        "Create functional specifications",
+        "Facilitate stakeholder workshops",
+        "Analyze business processes",
+        "Validate solutions meet business needs"
+      ],
+      "typicalSkills": ["Requirements gathering", "Process modeling", "Documentation", "Stakeholder communication"]
+    },
+    {
+      "roleId": "STAKEHOLDERS",
+      "roleName": "Stakeholders",
+      "category": "BUSINESS",
+      "roleDescription": "Individuals or groups with an interest in the project's outcome, including executives, customers, and end-users.",
+      "responsibilities": [
+        "Provide business context and requirements",
+        "Approve key decisions and deliverables",
+        "Allocate budget and resources",
+        "Champion the project within the organization"
+      ],
+      "typicalSkills": ["Domain expertise", "Decision making", "Strategic thinking"]
+    },
+    {
+      "roleId": "MARKETING",
+      "roleName": "Marketing Specialist",
+      "category": "MARKETING",
+      "roleDescription": "Responsible for market research, go-to-market strategy, SEO/SEM, and promoting the application to target audiences.",
+      "responsibilities": [
+        "Conduct market and competitor research",
+        "Develop go-to-market strategy",
+        "Plan and execute marketing campaigns",
+        "Define brand positioning and messaging",
+        "Measure and optimize marketing performance"
+      ],
+      "typicalSkills": ["Market research", "Digital marketing", "SEO/SEM", "Analytics"]
+    },
+    {
+      "roleId": "UX_RESEARCHER",
+      "roleName": "UX Researcher",
+      "category": "DESIGN",
+      "roleDescription": "Conducts user research through interviews, surveys, and usability testing to understand user behaviors, needs, and motivations.",
+      "responsibilities": [
+        "Plan and conduct user research studies",
+        "Perform usability testing",
+        "Analyze and synthesize research findings",
+        "Create user personas and journey maps",
+        "Advocate for user needs in design decisions"
+      ],
+      "typicalSkills": ["User interviews", "Usability testing", "Survey design", "Data synthesis"]
+    },
+    {
+      "roleId": "UX_DESIGNER",
+      "roleName": "UX Designer",
+      "category": "DESIGN",
+      "roleDescription": "Designs the user experience including information architecture, wireframes, and prototypes with focus on usability and user goals.",
+      "responsibilities": [
+        "Create user flows and wireframes",
+        "Design information architecture",
+        "Build interactive prototypes",
+        "Conduct design reviews",
+        "Iterate based on user feedback"
+      ],
+      "typicalSkills": ["Wireframing", "Prototyping", "Interaction design", "Usability principles"]
+    },
+    {
+      "roleId": "UI_DESIGNER",
+      "roleName": "UI Designer",
+      "category": "DESIGN",
+      "roleDescription": "Designs the visual user interface including layout, visual hierarchy, responsiveness, and interaction patterns.",
+      "responsibilities": [
+        "Create high-fidelity visual designs",
+        "Define visual design systems",
+        "Design for multiple screen sizes",
+        "Specify interaction states and animations",
+        "Collaborate with developers on implementation"
+      ],
+      "typicalSkills": ["Visual design", "Design systems", "Typography", "Color theory", "Figma/Sketch"]
+    },
+    {
+      "roleId": "VISUAL_DESIGNER",
+      "roleName": "Visual Designer",
+      "category": "DESIGN",
+      "roleDescription": "Focuses on visual aesthetics including imagery, color theory, typography, iconography, and overall visual polish.",
+      "responsibilities": [
+        "Create visual assets and illustrations",
+        "Define color palettes and typography",
+        "Design icons and graphics",
+        "Ensure visual consistency",
+        "Polish final designs for production"
+      ],
+      "typicalSkills": ["Graphic design", "Illustration", "Color theory", "Typography"]
+    },
+    {
+      "roleId": "BRAND_DESIGNER",
+      "roleName": "Brand Designer",
+      "category": "DESIGN",
+      "roleDescription": "Ensures the application adheres to brand guidelines, visual identity, and maintains consistency across all touchpoints.",
+      "responsibilities": [
+        "Maintain brand guidelines",
+        "Ensure brand consistency across application",
+        "Adapt brand for digital contexts",
+        "Review designs for brand compliance"
+      ],
+      "typicalSkills": ["Brand identity", "Visual design", "Style guides", "Brand strategy"]
+    },
+    {
+      "roleId": "INFO_ARCHITECT",
+      "roleName": "Information Architect",
+      "category": "DESIGN",
+      "roleDescription": "Organizes, structures, and labels content to support usability and findability within the application.",
+      "responsibilities": [
+        "Design content structure and hierarchy",
+        "Create sitemaps and navigation systems",
+        "Define taxonomies and labeling",
+        "Conduct card sorting exercises",
+        "Optimize information findability"
+      ],
+      "typicalSkills": ["Information architecture", "Content strategy", "Taxonomy design", "Navigation design"]
+    },
+    {
+      "roleId": "SOLUTIONS_ARCHITECT",
+      "roleName": "Solutions Architect",
+      "category": "TECHNICAL",
+      "roleDescription": "Designs the overall system architecture, selects technology standards, ensures scalability, and maintains architectural integrity.",
+      "responsibilities": [
+        "Design system architecture",
+        "Select technology standards",
+        "Ensure scalability and performance",
+        "Create architecture documentation",
+        "Review implementations for architectural compliance"
+      ],
+      "typicalSkills": ["System design", "Cloud architecture", "Integration patterns", "Technical documentation"]
+    },
+    {
+      "roleId": "SENIOR_DEV",
+      "roleName": "Senior Developer",
+      "category": "DEVELOPMENT",
+      "roleDescription": "Experienced developer who handles complex technical challenges, conducts code reviews, mentors junior developers, and drives technical excellence.",
+      "responsibilities": [
+        "Implement complex features",
+        "Conduct thorough code reviews",
+        "Mentor junior developers",
+        "Contribute to technical decisions",
+        "Improve codebase quality"
+      ],
+      "typicalSkills": ["Advanced programming", "Code review", "Mentoring", "Problem solving"]
+    },
+    {
+      "roleId": "FE_DEV",
+      "roleName": "Frontend Developer",
+      "category": "DEVELOPMENT",
+      "roleDescription": "Builds the client-side of the application using HTML, CSS, and JavaScript frameworks, focusing on user interface implementation.",
+      "responsibilities": [
+        "Implement UI components and pages",
+        "Integrate with backend APIs",
+        "Ensure responsive design",
+        "Optimize frontend performance",
+        "Write frontend tests"
+      ],
+      "typicalSkills": ["JavaScript/TypeScript", "React/Vue/Angular", "CSS", "HTML", "Web APIs"]
+    },
+    {
+      "roleId": "BE_DEV",
+      "roleName": "Backend Developer",
+      "category": "DEVELOPMENT",
+      "roleDescription": "Builds the server-side logic, APIs, database interactions, and business logic layer of the application.",
+      "responsibilities": [
+        "Design and implement APIs",
+        "Build business logic layer",
+        "Manage database interactions",
+        "Implement authentication and authorization",
+        "Write backend tests"
+      ],
+      "typicalSkills": ["Server-side languages", "API design", "Databases", "Security"]
+    },
+    {
+      "roleId": "FULLSTACK_DEV",
+      "roleName": "Full Stack Developer",
+      "category": "DEVELOPMENT",
+      "roleDescription": "Capable of working across both frontend and backend layers, providing end-to-end feature development.",
+      "responsibilities": [
+        "Implement features across the stack",
+        "Bridge frontend and backend concerns",
+        "Build complete user flows",
+        "Debug issues across layers"
+      ],
+      "typicalSkills": ["Frontend technologies", "Backend technologies", "Databases", "API design"]
+    },
+    {
+      "roleId": "MOBILE_DEV",
+      "roleName": "Mobile Developer",
+      "category": "DEVELOPMENT",
+      "roleDescription": "Specializes in native or cross-platform mobile application development for iOS and/or Android platforms.",
+      "responsibilities": [
+        "Build mobile applications",
+        "Implement platform-specific features",
+        "Optimize for mobile performance",
+        "Handle app store submissions"
+      ],
+      "typicalSkills": ["iOS/Swift", "Android/Kotlin", "React Native/Flutter", "Mobile UX"]
+    },
+    {
+      "roleId": "UI_DEV",
+      "roleName": "UI Developer",
+      "category": "DEVELOPMENT",
+      "roleDescription": "Specializes in translating visual designs into pixel-perfect code with expertise in CSS, animations, and design systems.",
+      "responsibilities": [
+        "Implement designs with precision",
+        "Build CSS architecture",
+        "Create animations and transitions",
+        "Maintain design system in code"
+      ],
+      "typicalSkills": ["Advanced CSS", "Animation", "Design systems", "Cross-browser compatibility"]
+    },
+    {
+      "roleId": "DEV_TEAM",
+      "roleName": "Development Team",
+      "category": "DEVELOPMENT",
+      "roleDescription": "The collective group of developers responsible for building the product increment.",
+      "responsibilities": [
+        "Self-organize to deliver work",
+        "Collaborate on technical decisions",
+        "Maintain code quality",
+        "Continuously improve practices"
+      ],
+      "typicalSkills": ["Collaboration", "Self-organization", "Technical skills"]
+    },
+    {
+      "roleId": "QA_ENGINEER",
+      "roleName": "QA Engineer",
+      "category": "QUALITY",
+      "roleDescription": "Responsible for testing the application to find defects, ensure quality standards, and validate requirements are met.",
+      "responsibilities": [
+        "Create and execute test plans",
+        "Perform manual testing",
+        "Report and track defects",
+        "Validate acceptance criteria",
+        "Ensure quality standards"
+      ],
+      "typicalSkills": ["Test planning", "Bug tracking", "Test execution", "Quality processes"]
+    },
+    {
+      "roleId": "QA_AUTOMATION",
+      "roleName": "QA Automation Engineer",
+      "category": "QUALITY",
+      "roleDescription": "Specializes in building and maintaining automated test suites, frameworks, and continuous testing pipelines.",
+      "responsibilities": [
+        "Build automated test frameworks",
+        "Write automated tests (unit, integration, E2E)",
+        "Integrate tests into CI/CD",
+        "Maintain test infrastructure",
+        "Improve test coverage and reliability"
+      ],
+      "typicalSkills": ["Test automation", "CI/CD", "Programming", "Test frameworks"]
+    },
+    {
+      "roleId": "DEVOPS",
+      "roleName": "DevOps Engineer",
+      "category": "OPERATIONS",
+      "roleDescription": "Manages infrastructure, CI/CD pipelines, deployment automation, and bridges development and operations.",
+      "responsibilities": [
+        "Build and maintain CI/CD pipelines",
+        "Manage infrastructure",
+        "Automate deployments",
+        "Monitor system health",
+        "Improve developer experience"
+      ],
+      "typicalSkills": ["CI/CD", "Cloud platforms", "Scripting", "Containerization"]
+    },
+    {
+      "roleId": "PLATFORM_ENGINEER",
+      "roleName": "Platform Engineer",
+      "category": "OPERATIONS",
+      "roleDescription": "Builds and maintains the internal developer platform, tooling, and self-service infrastructure capabilities.",
+      "responsibilities": [
+        "Build internal developer platform",
+        "Create self-service infrastructure",
+        "Standardize deployment patterns",
+        "Improve developer productivity",
+        "Maintain platform documentation"
+      ],
+      "typicalSkills": ["Platform design", "Kubernetes", "IaC", "Developer experience"]
+    },
+    {
+      "roleId": "SEC_ENGINEER",
+      "roleName": "Security Engineer",
+      "category": "SECURITY",
+      "roleDescription": "Ensures the application is secure from vulnerabilities, implements security controls, and responds to security incidents.",
+      "responsibilities": [
+        "Conduct security assessments",
+        "Implement security controls",
+        "Respond to security incidents",
+        "Perform threat modeling",
+        "Review code for security issues"
+      ],
+      "typicalSkills": ["Application security", "Threat modeling", "Penetration testing", "Security tools"]
+    },
+    {
+      "roleId": "DBA",
+      "roleName": "Database Administrator",
+      "category": "DATA",
+      "roleDescription": "Manages database installation, configuration, performance tuning, backups, and ensures data integrity.",
+      "responsibilities": [
+        "Design and optimize databases",
+        "Manage backups and recovery",
+        "Monitor database performance",
+        "Plan capacity and scaling",
+        "Ensure data integrity"
+      ],
+      "typicalSkills": ["Database administration", "SQL", "Performance tuning", "Backup/recovery"]
+    },
+    {
+      "roleId": "DATA_ENGINEER",
+      "roleName": "Data Engineer",
+      "category": "DATA",
+      "roleDescription": "Designs and builds data pipelines, ETL processes, and data infrastructure to support analytics and application needs.",
+      "responsibilities": [
+        "Build data pipelines",
+        "Design data warehouse schemas",
+        "Implement ETL processes",
+        "Ensure data quality",
+        "Optimize data infrastructure"
+      ],
+      "typicalSkills": ["Data pipelines", "SQL", "Python", "Data warehousing", "ETL tools"]
+    },
+    {
+      "roleId": "SYS_ADMIN",
+      "roleName": "System Administrator",
+      "category": "OPERATIONS",
+      "roleDescription": "Responsible for configuration, maintenance, and reliable operation of computer systems and servers.",
+      "responsibilities": [
+        "Configure and maintain servers",
+        "Manage user access and permissions",
+        "Apply patches and updates",
+        "Monitor system health",
+        "Troubleshoot issues"
+      ],
+      "typicalSkills": ["Linux/Windows administration", "Networking", "Security", "Scripting"]
+    },
+    {
+      "roleId": "CLOUD_ARCHITECT",
+      "roleName": "Cloud Architect",
+      "category": "OPERATIONS",
+      "roleDescription": "Oversees cloud computing strategy, designs cloud infrastructure, and ensures optimal use of cloud services.",
+      "responsibilities": [
+        "Design cloud architecture",
+        "Select cloud services",
+        "Optimize cloud costs",
+        "Ensure cloud security",
+        "Plan multi-region/multi-cloud strategy"
+      ],
+      "typicalSkills": ["AWS/Azure/GCP", "Cloud architecture", "Cost optimization", "Security"]
+    },
+    {
+      "roleId": "SRE",
+      "roleName": "Site Reliability Engineer",
+      "category": "OPERATIONS",
+      "roleDescription": "Ensures site reliability, defines SLOs/SLIs, manages incident response, and applies software engineering to operations problems.",
+      "responsibilities": [
+        "Define and track SLOs/SLIs",
+        "Lead incident response",
+        "Reduce toil through automation",
+        "Improve system reliability",
+        "Conduct post-incident reviews"
+      ],
+      "typicalSkills": ["Reliability engineering", "Incident management", "Automation", "Observability"]
+    },
+    {
+      "roleId": "PERF_ENGINEER",
+      "roleName": "Performance Engineer",
+      "category": "QUALITY",
+      "roleDescription": "Focuses on optimizing application performance, conducting load testing, and ensuring scalability under demand.",
+      "responsibilities": [
+        "Conduct performance testing",
+        "Identify and fix bottlenecks",
+        "Optimize application performance",
+        "Define performance benchmarks",
+        "Capacity planning"
+      ],
+      "typicalSkills": ["Performance testing", "Profiling", "Load testing tools", "Optimization"]
+    },
+    {
+      "roleId": "LEGAL",
+      "roleName": "Legal Advisor",
+      "category": "COMPLIANCE",
+      "roleDescription": "Provides guidance on legal compliance, contracts, data privacy regulations, and intellectual property protection.",
+      "responsibilities": [
+        "Review legal requirements",
+        "Draft terms of service and policies",
+        "Advise on compliance",
+        "Review contracts",
+        "Protect intellectual property"
+      ],
+      "typicalSkills": ["Legal expertise", "Privacy regulations", "Contract law", "IP law"]
+    },
+    {
+      "roleId": "DPO",
+      "roleName": "Data Protection Officer",
+      "category": "COMPLIANCE",
+      "roleDescription": "Ensures the organization complies with data protection laws (GDPR, CCPA) and manages data subject rights requests.",
+      "responsibilities": [
+        "Ensure data protection compliance",
+        "Handle data subject requests",
+        "Conduct privacy impact assessments",
+        "Train staff on data protection",
+        "Liaise with regulators"
+      ],
+      "typicalSkills": ["Data protection laws", "Privacy frameworks", "Risk assessment", "Compliance"]
+    },
+    {
+      "roleId": "TECH_WRITER",
+      "roleName": "Technical Writer",
+      "category": "DOCUMENTATION",
+      "roleDescription": "Creates and maintains documentation including API docs, architecture decision records, user guides, and runbooks.",
+      "responsibilities": [
+        "Write technical documentation",
+        "Create user guides and tutorials",
+        "Maintain API documentation",
+        "Document operational procedures",
+        "Ensure documentation accuracy"
+      ],
+      "typicalSkills": ["Technical writing", "Documentation tools", "Information design", "Editing"]
+    },
+    {
+      "roleId": "SEO_SPECIALIST",
+      "roleName": "SEO Specialist",
+      "category": "MARKETING",
+      "roleDescription": "Optimizes the application for search engines to increase organic visibility and traffic.",
+      "responsibilities": [
+        "Develop SEO strategy",
+        "Optimize on-page SEO",
+        "Conduct keyword research",
+        "Monitor search rankings",
+        "Improve Core Web Vitals"
+      ],
+      "typicalSkills": ["SEO", "Analytics", "Keyword research", "Technical SEO"]
+    },
+    {
+      "roleId": "A11Y_SPECIALIST",
+      "roleName": "Accessibility Specialist",
+      "category": "QUALITY",
+      "roleDescription": "Ensures the application is accessible to people with disabilities, achieving WCAG compliance and inclusive design.",
+      "responsibilities": [
+        "Audit for accessibility compliance",
+        "Define accessibility standards",
+        "Test with assistive technologies",
+        "Train team on accessibility",
+        "Remediate accessibility issues"
+      ],
+      "typicalSkills": ["WCAG", "Screen readers", "Accessibility testing", "Inclusive design"]
+    },
+    {
+      "roleId": "DATA_ANALYST",
+      "roleName": "Data Analyst",
+      "category": "DATA",
+      "roleDescription": "Analyzes application and business data to derive insights, measure KPIs, and inform product decisions.",
+      "responsibilities": [
+        "Analyze user and business data",
+        "Create reports and dashboards",
+        "Measure KPIs and metrics",
+        "Provide data-driven insights",
+        "Support A/B testing analysis"
+      ],
+      "typicalSkills": ["Data analysis", "SQL", "Visualization tools", "Statistics"]
+    },
+    {
+      "roleId": "ML_ENGINEER",
+      "roleName": "ML/AI Engineer",
+      "category": "DEVELOPMENT",
+      "roleDescription": "Develops and integrates machine learning models and AI capabilities into the application.",
+      "responsibilities": [
+        "Develop ML models",
+        "Integrate AI capabilities",
+        "Manage ML infrastructure",
+        "Monitor model performance",
+        "Iterate on model accuracy"
+      ],
+      "typicalSkills": ["Machine learning", "Python", "ML frameworks", "MLOps"]
+    },
+    {
+      "roleId": "SUPPORT",
+      "roleName": "Support Team",
+      "category": "OPERATIONS",
+      "roleDescription": "Assists users with issues, manages support tickets, and escalates bugs to development teams.",
+      "responsibilities": [
+        "Respond to user inquiries",
+        "Troubleshoot user issues",
+        "Escalate bugs to development",
+        "Maintain knowledge base",
+        "Identify common issues"
+      ],
+      "typicalSkills": ["Customer service", "Troubleshooting", "Communication", "Product knowledge"]
+    },
+    {
+      "roleId": "HR",
+      "roleName": "Human Resources",
+      "category": "BUSINESS",
+      "roleDescription": "Manages personnel including hiring, onboarding, training coordination, and team development.",
+      "responsibilities": [
+        "Recruit and hire team members",
+        "Coordinate onboarding",
+        "Manage training programs",
+        "Handle personnel matters",
+        "Support team development"
+      ],
+      "typicalSkills": ["Recruiting", "Onboarding", "Training", "HR processes"]
+    },
+    {
+      "roleId": "CAB",
+      "roleName": "Change Advisory Board",
+      "category": "MANAGEMENT",
+      "roleDescription": "A governance body that reviews, assesses risk, and approves changes to production environments.",
+      "responsibilities": [
+        "Review change requests",
+        "Assess change risk",
+        "Approve or reject changes",
+        "Schedule change windows",
+        "Review post-implementation results"
+      ],
+      "typicalSkills": ["Risk assessment", "Change management", "Governance"]
+    },
+    {
+      "roleId": "EXT_AUDITOR",
+      "roleName": "External Security Auditor",
+      "category": "SECURITY",
+      "roleDescription": "Third-party expert who conducts independent security assessments, penetration tests, and compliance audits.",
+      "responsibilities": [
+        "Conduct security audits",
+        "Perform penetration testing",
+        "Assess compliance status",
+        "Provide remediation recommendations",
+        "Certify compliance"
+      ],
+      "typicalSkills": ["Security auditing", "Penetration testing", "Compliance frameworks"]
+    },
+    {
+      "roleId": "BETA_USERS",
+      "roleName": "Beta Users",
+      "category": "TESTING",
+      "roleDescription": "A select group of end-users who test the application before general release and provide feedback.",
+      "responsibilities": [
+        "Test pre-release features",
+        "Report bugs and issues",
+        "Provide usability feedback",
+        "Validate use cases"
+      ],
+      "typicalSkills": ["Domain expertise", "Attention to detail", "Communication"]
+    },
+    {
+      "roleId": "INCIDENT_COMMANDER",
+      "roleName": "Incident Commander",
+      "category": "OPERATIONS",
+      "roleDescription": "Leads incident response, coordinates communication, and drives resolution during production incidents.",
+      "responsibilities": [
+        "Lead incident response",
+        "Coordinate response team",
+        "Manage communications",
+        "Make critical decisions",
+        "Drive post-incident review"
+      ],
+      "typicalSkills": ["Incident management", "Leadership", "Communication", "Decision making"]
+    }
+  ]
+}

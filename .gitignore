@@ -1,0 +1,21 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node (if used for validation)
+node_modules/
+npm-debug.log
+
+# Local environment
+.env
+.env.local
+
+# Temporary files
+*.tmp
+*.bak

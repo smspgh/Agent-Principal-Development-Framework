@@ -1,0 +1,112 @@
+{
+  "methodologyId": "AGILE_SCRUM",
+  "name": "Agile - Scrum",
+  "description": "An iterative framework that structures development in fixed-length cycles called Sprints (typically 1-4 weeks). Emphasizes team collaboration, continuous feedback, adaptive planning, and delivering working software incrementally.",
+  "characteristics": [
+    "Fixed-length Sprints (1-4 weeks)",
+    "Cross-functional, self-organizing teams",
+    "Product Backlog prioritized by Product Owner",
+    "Regular ceremonies (Planning, Review, Retro)",
+    "Empirical process control (transparency, inspection, adaptation)"
+  ],
+  "bestFor": [
+    "Products with evolving requirements",
+    "Teams that can work in dedicated Sprints",
+    "Projects benefiting from regular stakeholder demos",
+    "Organizations committed to Agile transformation",
+    "Complex products requiring iterative discovery"
+  ],
+  "notIdealFor": [
+    "Very small teams (< 3 developers)",
+    "Highly regulated environments requiring extensive upfront documentation",
+    "Teams unable to commit to Sprint ceremonies",
+    "Maintenance-only work with unpredictable interrupts"
+  ],
+  "primaryRoles": ["PRODUCT_OWNER", "SCRUM_MASTER", "DEV_TEAM"],
+  "supportingRoles": ["STAKEHOLDERS", "TECH_LEAD"],
+  "keyPractices": {
+    "planning": "Sprint Planning at start of each Sprint",
+    "requirements": "User stories with acceptance criteria in Product Backlog",
+    "changeManagement": "Changes incorporated in next Sprint, not mid-Sprint",
+    "testing": "Continuous testing within Sprint, Definition of Done",
+    "documentation": "Just enough documentation, working software priority"
+  },
+  "ceremonies": [
+    {
+      "name": "Sprint Planning",
+      "frequency": "Start of Sprint",
+      "duration": "2-4 hours per 2-week Sprint",
+      "purpose": "Define Sprint Goal and select backlog items"
+    },
+    {
+      "name": "Daily Standup",
+      "frequency": "Daily",
+      "duration": "15 minutes",
+      "purpose": "Synchronize team, identify blockers"
+    },
+    {
+      "name": "Sprint Review",
+      "frequency": "End of Sprint",
+      "duration": "1-2 hours per 2-week Sprint",
+      "purpose": "Demo working software to stakeholders"
+    },
+    {
+      "name": "Sprint Retrospective",
+      "frequency": "End of Sprint",
+      "duration": "1-1.5 hours per 2-week Sprint",
+      "purpose": "Inspect and adapt team process"
+    },
+    {
+      "name": "Backlog Refinement",
+      "frequency": "Weekly or as needed",
+      "duration": "1-2 hours",
+      "purpose": "Clarify and estimate upcoming work"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "Product Backlog",
+      "owner": "Product Owner",
+      "description": "Ordered list of everything needed in the product"
+    },
+    {
+      "name": "Sprint Backlog",
+      "owner": "Development Team",
+      "description": "Items selected for the Sprint plus plan for delivery"
+    },
+    {
+      "name": "Increment",
+      "owner": "Development Team",
+      "description": "Sum of all completed backlog items meeting Definition of Done"
+    }
+  ],
+  "includedStepIds": [
+    "1.1", "1.2", "1.3", "1.4", "1.5", "1.7", "1.8", "1.9", "1.10", "1.11",
+    "2.1", "2.2", "2.3", "2.4", "2.6",
+    "3.1", "3.2", "3.3", "3.4", "3.5", "3.6", "3.7",
+    "4.1", "4.2", "4.3", "4.4", "4.5", "4.6", "4.7",
+    "5.1", "5.2", "5.3", "5.4", "5.5", "5.6", "5.7",
+    "6.1", "6.2", "6.3", "6.4", "6.5", "6.6", "6.7", "6.8",
+    "7.1", "7.2", "7.3", "7.4", "7.5", "7.6", "7.7",
+    "8.1", "8.3", "8.4", "8.5",
+    "9.2", "9.3", "9.4", "9.5", "9.6", "9.7", "9.8", "9.9", "9.10", "9.11", "9.12", "9.13"
+  ],
+  "excludedStepIds": [
+    "1.6", "1.12",
+    "2.5",
+    "8.2",
+    "9.1", "9.14"
+  ],
+  "additionalConfig": {
+    "recommendedSprintLength": "2 weeks",
+    "requiresBacklog": true,
+    "usesVelocity": true,
+    "hasIterations": true,
+    "formalApprovals": false,
+    "changeControlRequired": false,
+    "recommendedTeamSize": {
+      "min": 3,
+      "max": 9
+    }
+  }
+}

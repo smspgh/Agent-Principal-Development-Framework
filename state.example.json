@@ -1,0 +1,264 @@
+{
+  "projectName": "Agent Principal Development Framework",
+  "projectDescription": "A comprehensive, modular guide for solo operators (Agent Principals) to develop web applications using AI agents.",
+  "methodology": "AGENT_PRINCIPAL_DEVOPS",
+  "projectMode": "existing",
+  "createdAt": "2026-01",
+  "lastUpdated": "2026-01-08",
+  "onboardedAt": "2026-01-08T18:49:00Z",
+  "currentPhase": null,
+  "currentStep": null,
+  "agentPrincipal": {
+    "name": "Steve",
+    "preferences": {
+      "approvalMode": "assisted",
+      "autoAdvance": false,
+      "verboseOutput": true
+    }
+  },
+  "codebaseProfile": {
+    "languages": ["JSON", "Markdown"],
+    "frameworks": ["Claude Code Slash Commands"],
+    "buildTools": [],
+    "testingFrameworks": [],
+    "cicd": null,
+    "hosting": null,
+    "repository": null,
+    "entryPoints": ["meta.json", ".claude/CLAUDE.md"],
+    "keyModules": [
+      "agents/*.json",
+      "phases/*.json",
+      "methodologies/*.json",
+      ".claude/commands/*.md"
+    ]
+  },
+  "existingAssets": {
+    "hasTests": false,
+    "testCoverage": null,
+    "hasDocs": false,
+    "hasCI": false,
+    "hasDocker": false,
+    "hasMonitoring": false
+  },
+  "phases": {
+    "1-discovery": {
+      "status": "not_started",
+      "existingStatus": "existing",
+      "startedAt": null,
+      "completedAt": null,
+      "steps": {},
+      "note": "Phase definition complete with agent mappings"
+    },
+    "2-design": {
+      "status": "not_started",
+      "existingStatus": "existing",
+      "startedAt": null,
+      "completedAt": null,
+      "steps": {},
+      "note": "Phase definition complete with agent mappings"
+    },
+    "3-architecture": {
+      "status": "not_started",
+      "existingStatus": "existing",
+      "startedAt": null,
+      "completedAt": null,
+      "steps": {},
+      "note": "Well-structured schema with clear module separation"
+    },
+    "4-backend": {
+      "status": "not_started",
+      "existingStatus": "partial",
+      "startedAt": null,
+      "completedAt": null,
+      "steps": {},
+      "note": "N/A - this is a configuration project, not an application"
+    },
+    "5-frontend": {
+      "status": "not_started",
+      "existingStatus": "partial",
+      "startedAt": null,
+      "completedAt": null,
+      "steps": {},
+      "note": "N/A - this is a configuration project, not an application"
+    },
+    "6-testing": {
+      "status": "not_started",
+      "existingStatus": "missing",
+      "startedAt": null,
+      "completedAt": null,
+      "steps": {},
+      "note": "No validation tests for JSON schemas"
+    },
+    "7-deployment": {
+      "status": "not_started",
+      "existingStatus": "missing",
+      "startedAt": null,
+      "completedAt": null,
+      "steps": {},
+      "note": "No CI/CD, no git repository detected"
+    },
+    "8-documentation": {
+      "status": "not_started",
+      "existingStatus": "partial",
+      "startedAt": null,
+      "completedAt": null,
+      "steps": {},
+      "note": "CLAUDE.md exists, but no README.md"
+    },
+    "9-operations": {
+      "status": "not_started",
+      "existingStatus": "missing",
+      "startedAt": null,
+      "completedAt": null,
+      "steps": {},
+      "note": "N/A - configuration project"
+    }
+  },
+  "auditResults": {
+    "lastAuditAt": "2026-01-08T18:49:00Z",
+    "findings": [
+      {
+        "id": "DOC-001",
+        "category": "documentation",
+        "severity": "medium",
+        "title": "Missing README.md",
+        "location": "project root",
+        "description": "No README file exists to explain project purpose, setup, and usage",
+        "recommendation": "Create README.md with project overview, installation, and usage instructions",
+        "effort": "small",
+        "status": "resolved",
+        "resolvedAt": "2026-01-08T18:52:00Z",
+        "resolvedBy": "IMP-001"
+      },
+      {
+        "id": "DEBT-001",
+        "category": "techdebt",
+        "severity": "low",
+        "title": "meta.json out of sync with commands",
+        "location": "meta.json:43-53",
+        "description": "commandFiles array does not include new commands (onboard.md, audit.md, improve.md, status.md)",
+        "recommendation": "Update meta.json commandFiles array to include all current commands",
+        "effort": "small",
+        "status": "resolved",
+        "resolvedAt": "2026-01-08T18:51:00Z",
+        "resolvedBy": "IMP-001"
+      },
+      {
+        "id": "QUA-001",
+        "category": "quality",
+        "severity": "low",
+        "title": "No JSON schema validation",
+        "location": "project-wide",
+        "description": "JSON files have no formal schema validation to ensure consistency",
+        "recommendation": "Consider adding JSON Schema files for validation",
+        "effort": "medium",
+        "status": "open"
+      },
+      {
+        "id": "OPS-001",
+        "category": "devops",
+        "severity": "medium",
+        "title": "No version control detected",
+        "location": "project root",
+        "description": "Project is not initialized as a git repository",
+        "recommendation": "Initialize git repository and add .gitignore",
+        "effort": "small",
+        "status": "resolved",
+        "resolvedAt": "2026-01-08T18:52:30Z",
+        "resolvedBy": "IMP-001"
+      },
+      {
+        "id": "DOC-002",
+        "category": "documentation",
+        "severity": "info",
+        "title": "Good inline documentation",
+        "location": ".claude/commands/*.md",
+        "description": "Slash commands have comprehensive documentation with examples",
+        "recommendation": "No action needed - maintain this quality",
+        "effort": "small",
+        "status": "resolved"
+      }
+    ],
+    "summary": {
+      "total": 5,
+      "bySeverity": {
+        "high": 0,
+        "medium": 2,
+        "low": 2,
+        "info": 1
+      },
+      "byCategory": {
+        "documentation": 2,
+        "techdebt": 1,
+        "quality": 1,
+        "devops": 1
+      },
+      "byStatus": {
+        "open": 1,
+        "in-progress": 0,
+        "resolved": 4,
+        "wont-fix": 0
+      }
+    },
+    "scores": {
+      "security": 100,
+      "quality": 70,
+      "architecture": 90,
+      "documentation": 90,
+      "devops": 80,
+      "overall": 86
+    }
+  },
+  "techDebt": {
+    "items": [
+      {
+        "id": "DEBT-001",
+        "title": "meta.json command list out of sync",
+        "priority": "low",
+        "category": "consistency",
+        "effort": "small"
+      }
+    ],
+    "totalCount": 1,
+    "byPriority": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "byCategory": {
+      "consistency": 1
+    },
+    "estimatedEffort": "30 minutes"
+  },
+  "improvementHistory": [
+    {
+      "cycleId": "IMP-001",
+      "target": "quick-wins",
+      "scope": "quick",
+      "startedAt": "2026-01-08T18:50:00Z",
+      "completedAt": "2026-01-08T18:53:00Z",
+      "itemsCompleted": 3,
+      "itemsSkipped": 0,
+      "scoreBefore": 72,
+      "scoreAfter": 86,
+      "findings": ["DOC-001", "DEBT-001", "OPS-001"]
+    }
+  ],
+  "currentImprovement": null,
+  "deliverables": [],
+  "decisions": [],
+  "blockers": [],
+  "metrics": {
+    "totalSteps": 0,
+    "completedSteps": 0,
+    "skippedSteps": 0,
+    "existingSteps": 0,
+    "legacySteps": 0,
+    "needsUpdateSteps": 0,
+    "totalTasks": 0,
+    "completedTasks": 0,
+    "improvementCycles": 1,
+    "findingsResolved": 4
+  }
+}

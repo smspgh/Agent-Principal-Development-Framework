@@ -1,0 +1,195 @@
+{
+  "phaseNumber": 9,
+  "phaseId": "OPERATIONS",
+  "phaseName": "Operations and Growth",
+  "description": "Ongoing maintenance, monitoring, iteration, and scaling of the application.",
+  "primaryAgents": ["DEVOPS", "QUALITY", "SECURITY"],
+  "objectives": [
+    "Establish operational excellence",
+    "Monitor and improve reliability",
+    "Continuously deliver value",
+    "Scale infrastructure as needed",
+    "Maintain security and compliance"
+  ],
+  "steps": [
+    {
+      "stepId": "9.2",
+      "stepName": "Establish monitoring and alerting",
+      "agentId": "DEVOPS",
+      "automationLevel": "full",
+      "approvalRequired": false,
+      "description": "Set up comprehensive operational monitoring.",
+      "tasks": [
+        {"taskId": "9.2.1", "task": "Configure comprehensive monitoring coverage", "deliverables": ["Monitoring setup"]},
+        {"taskId": "9.2.2", "task": "Set up intelligent alerting with context", "deliverables": ["Alerting rules"]},
+        {"taskId": "9.2.3", "task": "Define escalation paths for Agent Principal", "deliverables": ["Escalation paths"]},
+        {"taskId": "9.2.4", "task": "Create and maintain dashboards", "deliverables": ["Dashboards"]},
+        {"taskId": "9.2.5", "task": "Set up SLO tracking and error budgets", "deliverables": ["SLO tracking"]}
+      ],
+      "outputs": ["Monitoring system", "Alerting", "SLO tracking"],
+      "agentPrompt": "Configure monitoring and alerting for solo operation. Set up dashboards for quick status checks. Define alerting thresholds that avoid alert fatigue."
+    },
+    {
+      "stepId": "9.3",
+      "stepName": "Implement incident management",
+      "agentId": "DEVOPS",
+      "automationLevel": "full",
+      "approvalRequired": false,
+      "description": "Establish processes for handling production incidents.",
+      "tasks": [
+        {"taskId": "9.3.1", "task": "Define incident severity levels", "deliverables": ["Severity definitions"]},
+        {"taskId": "9.3.2", "task": "Establish incident response procedures", "deliverables": ["Response procedures"]},
+        {"taskId": "9.3.3", "task": "Set up incident notification channels", "deliverables": ["Notification channels"]},
+        {"taskId": "9.3.4", "task": "Create escalation guidelines", "deliverables": ["Escalation guidelines"]},
+        {"taskId": "9.3.5", "task": "Implement post-incident review process", "deliverables": ["PIR process"]},
+        {"taskId": "9.3.6", "task": "Track incident metrics (MTTD, MTTR)", "deliverables": ["Incident metrics"]}
+      ],
+      "outputs": ["Incident management process", "Escalation procedures", "Metrics tracking"],
+      "agentPrompt": "Create incident management procedures optimized for solo Agent Principal. Define severity levels and response procedures. Set up notification channels."
+    },
+    {
+      "stepId": "9.4",
+      "stepName": "Analyze user behavior and collect feedback",
+      "agentId": "STRATEGY",
+      "automationLevel": "assisted",
+      "approvalRequired": true,
+      "description": "Gather insights to inform product decisions.",
+      "tasks": [
+        {"taskId": "9.4.1", "task": "Review analytics data regularly", "deliverables": ["Analytics reviews"]},
+        {"taskId": "9.4.2", "task": "Analyze user feedback patterns", "deliverables": ["Feedback analysis"]},
+        {"taskId": "9.4.3", "task": "Identify feature adoption patterns", "deliverables": ["Adoption analysis"]},
+        {"taskId": "9.4.4", "task": "Run A/B tests on key features", "deliverables": ["A/B test results"]},
+        {"taskId": "9.4.5", "task": "Monitor feature adoption metrics", "deliverables": ["Adoption metrics"]},
+        {"taskId": "9.4.6", "task": "Create regular product insights reports", "deliverables": ["Insights reports"]}
+      ],
+      "outputs": ["User insights", "Analytics reports", "Feature adoption data"],
+      "agentPrompt": "Analyze user analytics and feedback to identify improvement opportunities. Create insights reports for Agent Principal decision-making."
+    },
+    {
+      "stepId": "9.5",
+      "stepName": "Manage and prioritize bugs",
+      "agentId": "QUALITY",
+      "automationLevel": "full",
+      "approvalRequired": false,
+      "description": "Handle bug reports and ensure timely resolution.",
+      "tasks": [
+        {"taskId": "9.5.1", "task": "Triage incoming bug reports", "deliverables": ["Bug triage"]},
+        {"taskId": "9.5.2", "task": "Prioritize bugs by severity and impact", "deliverables": ["Bug prioritization"]},
+        {"taskId": "9.5.3", "task": "Track and implement bug fixes", "deliverables": ["Bug tracking"]},
+        {"taskId": "9.5.4", "task": "Verify fixes and deploy patches", "deliverables": ["Fix verification"]},
+        {"taskId": "9.5.5", "task": "Document known issues", "deliverables": ["Known issues doc"]}
+      ],
+      "outputs": ["Bug tracking process", "Resolution metrics"],
+      "agentPrompt": "Triage and prioritize reported bugs. Implement fixes following the established workflow. Verify fixes with automated tests."
+    },
+    {
+      "stepId": "9.6",
+      "stepName": "Plan and develop new features",
+      "agentId": "STRATEGY",
+      "automationLevel": "assisted",
+      "approvalRequired": true,
+      "description": "Continue delivering value through new feature development.",
+      "tasks": [
+        {"taskId": "9.6.1", "task": "Maintain and groom product backlog", "deliverables": ["Groomed backlog"]},
+        {"taskId": "9.6.2", "task": "Prioritize features based on value and effort", "deliverables": ["Prioritized roadmap"]},
+        {"taskId": "9.6.3", "task": "Plan development iterations", "deliverables": ["Iteration plans"]},
+        {"taskId": "9.6.4", "task": "Develop and release new features", "deliverables": ["New features"]},
+        {"taskId": "9.6.5", "task": "Gather and incorporate user feedback", "deliverables": ["Feedback integration"]}
+      ],
+      "outputs": ["New features", "Updated roadmap", "Feedback loop"],
+      "agentPrompt": "Help Agent Principal prioritize and plan new features based on user feedback and business value. Maintain the product roadmap."
+    },
+    {
+      "stepId": "9.7",
+      "stepName": "Perform data migration and management",
+      "agentId": "ARCHITECTURE",
+      "automationLevel": "full",
+      "approvalRequired": false,
+      "description": "Manage data lifecycle and migrations.",
+      "tasks": [
+        {"taskId": "9.7.1", "task": "Plan and execute data migrations", "deliverables": ["Migration execution"]},
+        {"taskId": "9.7.2", "task": "Manage database schema changes", "deliverables": ["Schema management"]},
+        {"taskId": "9.7.3", "task": "Implement data archival strategies", "deliverables": ["Archival process"]},
+        {"taskId": "9.7.4", "task": "Monitor database performance", "deliverables": ["Performance monitoring"]},
+        {"taskId": "9.7.5", "task": "Ensure data backup integrity", "deliverables": ["Backup verification"]}
+      ],
+      "outputs": ["Data management processes", "Migration procedures"],
+      "agentPrompt": "Plan and execute safe data migrations. Monitor database performance. Implement data archival for long-term storage management."
+    },
+    {
+      "stepId": "9.8",
+      "stepName": "Scale infrastructure",
+      "agentId": "DEVOPS",
+      "automationLevel": "full",
+      "approvalRequired": false,
+      "description": "Grow infrastructure capacity to match demand.",
+      "tasks": [
+        {"taskId": "9.8.1", "task": "Monitor resource utilization trends", "deliverables": ["Utilization reports"]},
+        {"taskId": "9.8.2", "task": "Plan capacity for expected growth", "deliverables": ["Capacity plan"]},
+        {"taskId": "9.8.3", "task": "Implement horizontal and vertical scaling", "deliverables": ["Scaling implementation"]},
+        {"taskId": "9.8.4", "task": "Optimize cloud costs", "deliverables": ["Cost optimization"]},
+        {"taskId": "9.8.5", "task": "Review and update auto-scaling policies", "deliverables": ["Scaling policies"]}
+      ],
+      "outputs": ["Scaled infrastructure", "Cost optimization", "Capacity planning"],
+      "agentPrompt": "Monitor infrastructure utilization and plan scaling. Optimize cloud costs while maintaining performance. Update auto-scaling policies as needed."
+    },
+    {
+      "stepId": "9.9",
+      "stepName": "Conduct security maintenance",
+      "agentId": "SECURITY",
+      "automationLevel": "assisted",
+      "approvalRequired": true,
+      "description": "Maintain security posture through ongoing activities.",
+      "tasks": [
+        {"taskId": "9.9.1", "task": "Schedule regular security reviews", "deliverables": ["Review schedule"]},
+        {"taskId": "9.9.2", "task": "Monitor for vulnerabilities in dependencies", "deliverables": ["Vulnerability monitoring"]},
+        {"taskId": "9.9.3", "task": "Apply security patches promptly", "deliverables": ["Patch management"]},
+        {"taskId": "9.9.4", "task": "Review and rotate secrets and credentials", "deliverables": ["Secret rotation"]},
+        {"taskId": "9.9.5", "task": "Update SBOM and track supply chain", "deliverables": ["SBOM updates"]},
+        {"taskId": "9.9.6", "task": "Plan periodic penetration testing", "deliverables": ["Pen test planning"]}
+      ],
+      "outputs": ["Security maintenance", "Vulnerability management", "Compliance"],
+      "agentPrompt": "Monitor for new vulnerabilities and apply patches. Rotate secrets on schedule. Update SBOM regularly. Report security status to Agent Principal."
+    },
+    {
+      "stepId": "9.10",
+      "stepName": "Maintain compliance",
+      "agentId": "SECURITY",
+      "automationLevel": "assisted",
+      "approvalRequired": true,
+      "description": "Ensure ongoing regulatory compliance.",
+      "tasks": [
+        {"taskId": "9.10.1", "task": "Monitor changes to regulations", "deliverables": ["Regulatory monitoring"]},
+        {"taskId": "9.10.2", "task": "Process data subject rights requests", "deliverables": ["DSR processing"]},
+        {"taskId": "9.10.3", "task": "Audit and manage consent records", "deliverables": ["Consent management"]},
+        {"taskId": "9.10.4", "task": "Review and update privacy policies", "deliverables": ["Policy updates"]},
+        {"taskId": "9.10.5", "task": "Maintain compliance documentation", "deliverables": ["Compliance docs"]},
+        {"taskId": "9.10.6", "task": "Conduct periodic compliance audits", "deliverables": ["Compliance audits"]}
+      ],
+      "outputs": ["Compliance maintenance", "Audit documentation"],
+      "agentPrompt": "Monitor regulatory changes affecting the application. Process data subject requests. Maintain compliance documentation and conduct regular audits."
+    },
+    {
+      "stepId": "9.11",
+      "stepName": "Disaster recovery testing",
+      "agentId": "DEVOPS",
+      "automationLevel": "full",
+      "approvalRequired": false,
+      "description": "Validate disaster recovery capabilities through testing.",
+      "tasks": [
+        {"taskId": "9.11.1", "task": "Schedule regular DR drills", "deliverables": ["DR drill schedule"]},
+        {"taskId": "9.11.2", "task": "Test backup restoration procedures", "deliverables": ["Restoration tests"]},
+        {"taskId": "9.11.3", "task": "Validate failover processes", "deliverables": ["Failover validation"]},
+        {"taskId": "9.11.4", "task": "Document and improve DR procedures", "deliverables": ["DR documentation"]},
+        {"taskId": "9.11.5", "task": "Review and update RTO/RPO targets", "deliverables": ["RTO/RPO review"]}
+      ],
+      "outputs": ["DR validation", "Recovery procedures", "RTO/RPO verification"],
+      "agentPrompt": "Schedule and execute disaster recovery tests. Validate backup restoration and failover. Document results and improve procedures."
+    }
+  ],
+  "qualityGate": {
+    "name": "operational-excellence",
+    "requiredDeliverables": ["monitoring-setup", "incident-procedures", "dr-procedures"],
+    "requiredApprovals": []
+  }
+}

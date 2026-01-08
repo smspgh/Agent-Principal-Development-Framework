@@ -1,0 +1,389 @@
+{
+  "phaseNumber": 1,
+  "phaseId": "DISCOVERY",
+  "phaseName": "Discovery and Planning",
+  "description": "Define the problem, understand users, establish scope, and set up the foundation for the project.",
+  "primaryAgents": ["STRATEGY", "SECURITY"],
+  "objectives": [
+    "Clearly define the problem being solved and value proposition",
+    "Understand target users and their needs",
+    "Establish project scope and priorities",
+    "Identify technical and compliance requirements",
+    "Conduct initial security planning"
+  ],
+  "steps": [
+    {
+      "stepId": "1.1",
+      "stepName": "Define the problem and core value proposition",
+      "agentId": "STRATEGY",
+      "automationLevel": "assisted",
+      "approvalRequired": true,
+      "description": "Establish a clear understanding of the problem being solved and the unique value the application will provide.",
+      "tasks": [
+        {
+          "taskId": "1.1.1",
+          "task": "Identify the core problem the application will solve",
+          "deliverables": ["Problem statement document"]
+        },
+        {
+          "taskId": "1.1.2",
+          "task": "Articulate the unique value proposition and differentiation",
+          "deliverables": ["Value proposition canvas"]
+        },
+        {
+          "taskId": "1.1.3",
+          "task": "Define success metrics and key performance indicators (KPIs)",
+          "deliverables": ["KPI definitions and targets"]
+        },
+        {
+          "taskId": "1.1.4",
+          "task": "Document business objectives, goals, and constraints",
+          "deliverables": ["Business objectives document"]
+        },
+        {
+          "taskId": "1.1.5",
+          "task": "Establish measurable outcomes for project success",
+          "deliverables": ["Success criteria document"]
+        }
+      ],
+      "outputs": ["Problem statement", "Value proposition", "Success metrics", "Business objectives"],
+      "agentPrompt": "Help the Agent Principal define a clear problem statement and value proposition. Ask clarifying questions about the target market, pain points, and differentiation. Propose measurable KPIs for success."
+    },
+    {
+      "stepId": "1.2",
+      "stepName": "Conduct market research and competitor analysis",
+      "agentId": "STRATEGY",
+      "automationLevel": "assisted",
+      "approvalRequired": true,
+      "description": "Analyze the competitive landscape and market opportunity to inform product strategy.",
+      "tasks": [
+        {
+          "taskId": "1.2.1",
+          "task": "Identify direct, indirect, and potential competitors",
+          "deliverables": ["Competitor list"]
+        },
+        {
+          "taskId": "1.2.2",
+          "task": "Analyze competitor features, pricing, UX, and positioning",
+          "deliverables": ["Feature comparison matrix"]
+        },
+        {
+          "taskId": "1.2.3",
+          "task": "Conduct SWOT analysis for competitive landscape",
+          "deliverables": ["SWOT analysis"]
+        },
+        {
+          "taskId": "1.2.4",
+          "task": "Identify market gaps, trends, and opportunities",
+          "deliverables": ["Market opportunity analysis"]
+        },
+        {
+          "taskId": "1.2.5",
+          "task": "Document findings in a competitive analysis report",
+          "deliverables": ["Competitive analysis report"]
+        }
+      ],
+      "outputs": ["Competitive analysis report", "Market opportunity assessment"],
+      "agentPrompt": "Research competitors in the space defined by the Agent Principal. Use web search to gather current information. Present a structured analysis with actionable insights."
+    },
+    {
+      "stepId": "1.3",
+      "stepName": "Identify target audience and create user personas",
+      "agentId": "STRATEGY",
+      "automationLevel": "assisted",
+      "approvalRequired": true,
+      "description": "Develop deep understanding of target users through research and persona development.",
+      "tasks": [
+        {
+          "taskId": "1.3.1",
+          "task": "Synthesize available user research and market data",
+          "deliverables": ["Research findings"]
+        },
+        {
+          "taskId": "1.3.2",
+          "task": "Analyze demographic, psychographic, and behavioral patterns",
+          "deliverables": ["User data analysis"]
+        },
+        {
+          "taskId": "1.3.3",
+          "task": "Create detailed user personas with goals and pain points",
+          "deliverables": ["User personas"]
+        },
+        {
+          "taskId": "1.3.4",
+          "task": "Map user journeys and identify key moments",
+          "deliverables": ["User journey maps"]
+        },
+        {
+          "taskId": "1.3.5",
+          "task": "Validate personas with Agent Principal",
+          "deliverables": ["Validated personas"]
+        }
+      ],
+      "outputs": ["User personas", "User journey maps", "Research synthesis"],
+      "agentPrompt": "Create 2-4 detailed user personas based on the target audience. Include demographics, goals, pain points, and behaviors. Map key user journeys showing touchpoints and emotions."
+    },
+    {
+      "stepId": "1.4",
+      "stepName": "Create user stories and use cases",
+      "agentId": "STRATEGY",
+      "automationLevel": "assisted",
+      "approvalRequired": true,
+      "description": "Document user requirements as actionable user stories with clear acceptance criteria.",
+      "tasks": [
+        {
+          "taskId": "1.4.1",
+          "task": "Write user stories in standard format (As a... I want... So that...)",
+          "deliverables": ["User stories"]
+        },
+        {
+          "taskId": "1.4.2",
+          "task": "Define clear acceptance criteria for each user story",
+          "deliverables": ["Acceptance criteria"]
+        },
+        {
+          "taskId": "1.4.3",
+          "task": "Create use case diagrams for complex interactions",
+          "deliverables": ["Use case diagrams"]
+        },
+        {
+          "taskId": "1.4.4",
+          "task": "Identify edge cases and exception flows",
+          "deliverables": ["Edge case documentation"]
+        },
+        {
+          "taskId": "1.4.5",
+          "task": "Prioritize user stories using MoSCoW or similar method",
+          "deliverables": ["Prioritized backlog"]
+        }
+      ],
+      "outputs": ["User stories with acceptance criteria", "Use case diagrams", "Prioritized requirements"],
+      "agentPrompt": "Generate comprehensive user stories from the personas and product vision. Include acceptance criteria using Given/When/Then format. Suggest prioritization based on user value and implementation complexity."
+    },
+    {
+      "stepId": "1.5",
+      "stepName": "Define Minimum Viable Product (MVP) scope",
+      "agentId": "STRATEGY",
+      "automationLevel": "assisted",
+      "approvalRequired": true,
+      "description": "Establish clear boundaries for the MVP and plan the product roadmap.",
+      "tasks": [
+        {
+          "taskId": "1.5.1",
+          "task": "List all potential features across the product vision",
+          "deliverables": ["Feature list"]
+        },
+        {
+          "taskId": "1.5.2",
+          "task": "Prioritize features based on user value, effort, and risk",
+          "deliverables": ["Prioritization matrix"]
+        },
+        {
+          "taskId": "1.5.3",
+          "task": "Define MVP scope boundaries and explicit exclusions",
+          "deliverables": ["MVP scope document"]
+        },
+        {
+          "taskId": "1.5.4",
+          "task": "Create product roadmap with future release themes",
+          "deliverables": ["Product roadmap"]
+        },
+        {
+          "taskId": "1.5.5",
+          "task": "Align with Agent Principal on MVP definition and trade-offs",
+          "deliverables": ["Scope alignment"]
+        }
+      ],
+      "outputs": ["MVP definition", "Product roadmap", "Scope agreement"],
+      "agentPrompt": "Help define MVP scope by analyzing user stories against value and effort. Recommend what to include vs defer. Create a phased roadmap for post-MVP features."
+    },
+    {
+      "stepId": "1.7",
+      "stepName": "Define legal and compliance requirements",
+      "agentId": "SECURITY",
+      "automationLevel": "assisted",
+      "approvalRequired": true,
+      "description": "Identify all legal, regulatory, and compliance requirements that will impact the application.",
+      "tasks": [
+        {
+          "taskId": "1.7.1",
+          "task": "Identify applicable data privacy regulations (GDPR, CCPA, etc.)",
+          "deliverables": ["Regulatory requirements list"]
+        },
+        {
+          "taskId": "1.7.2",
+          "task": "Draft Terms of Service and Privacy Policy requirements",
+          "deliverables": ["Legal documents drafts"]
+        },
+        {
+          "taskId": "1.7.3",
+          "task": "Determine cookie consent and tracking requirements",
+          "deliverables": ["Cookie policy"]
+        },
+        {
+          "taskId": "1.7.4",
+          "task": "Identify industry-specific compliance (HIPAA, PCI-DSS, SOC 2, etc.)",
+          "deliverables": ["Compliance requirements"]
+        },
+        {
+          "taskId": "1.7.5",
+          "task": "Define data residency and sovereignty requirements",
+          "deliverables": ["Data residency requirements"]
+        },
+        {
+          "taskId": "1.7.6",
+          "task": "Plan for data subject rights (access, deletion, portability)",
+          "deliverables": ["Data subject rights process"]
+        },
+        {
+          "taskId": "1.7.7",
+          "task": "Review intellectual property and licensing considerations",
+          "deliverables": ["IP review"]
+        }
+      ],
+      "outputs": ["Compliance requirements document", "Legal policy drafts", "Data handling requirements"],
+      "agentPrompt": "Analyze the application concept for applicable regulations. Consider target markets, data types collected, and industry. Provide a compliance checklist with specific requirements."
+    },
+    {
+      "stepId": "1.8",
+      "stepName": "Select the technology stack",
+      "agentId": "ARCHITECTURE",
+      "automationLevel": "full",
+      "approvalRequired": false,
+      "description": "Evaluate and select technologies that will be used to build the application.",
+      "tasks": [
+        {
+          "taskId": "1.8.1",
+          "task": "Evaluate frontend framework options (React, Vue, etc.)",
+          "deliverables": ["Frontend evaluation"]
+        },
+        {
+          "taskId": "1.8.2",
+          "task": "Evaluate backend framework options (Node, Python, Go, etc.)",
+          "deliverables": ["Backend evaluation"]
+        },
+        {
+          "taskId": "1.8.3",
+          "task": "Select database technology (SQL vs NoSQL, specific engines)",
+          "deliverables": ["Database selection"]
+        },
+        {
+          "taskId": "1.8.4",
+          "task": "Choose hosting and cloud infrastructure provider",
+          "deliverables": ["Cloud provider selection"]
+        },
+        {
+          "taskId": "1.8.5",
+          "task": "Evaluate build tools, package managers, and dev tooling",
+          "deliverables": ["Tooling selection"]
+        },
+        {
+          "taskId": "1.8.6",
+          "task": "Consider community support, hiring pool, and ecosystem",
+          "deliverables": ["Risk assessment"]
+        },
+        {
+          "taskId": "1.8.7",
+          "task": "Document technology decisions with rationale (ADR format)",
+          "deliverables": ["Architecture Decision Records"]
+        }
+      ],
+      "outputs": ["Technology stack documentation", "ADRs"],
+      "agentPrompt": "Recommend a technology stack based on project requirements, team expertise (solo Agent Principal), and scalability needs. Document decisions in ADR format with pros/cons."
+    },
+    {
+      "stepId": "1.9",
+      "stepName": "Conduct threat modeling and security planning",
+      "agentId": "SECURITY",
+      "automationLevel": "assisted",
+      "approvalRequired": true,
+      "description": "Identify security threats and plan security controls before development begins.",
+      "tasks": [
+        {
+          "taskId": "1.9.1",
+          "task": "Identify assets, trust boundaries, and data flows",
+          "deliverables": ["Asset inventory", "Data flow diagrams"]
+        },
+        {
+          "taskId": "1.9.2",
+          "task": "Apply threat modeling framework (STRIDE)",
+          "deliverables": ["Threat model"]
+        },
+        {
+          "taskId": "1.9.3",
+          "task": "Document potential threats and attack vectors",
+          "deliverables": ["Threat documentation"]
+        },
+        {
+          "taskId": "1.9.4",
+          "task": "Prioritize threats by likelihood and impact",
+          "deliverables": ["Prioritized threat list"]
+        },
+        {
+          "taskId": "1.9.5",
+          "task": "Define security requirements and controls",
+          "deliverables": ["Security requirements"]
+        },
+        {
+          "taskId": "1.9.6",
+          "task": "Plan security testing approach (SAST, DAST)",
+          "deliverables": ["Security testing plan"]
+        },
+        {
+          "taskId": "1.9.7",
+          "task": "Review OWASP Top 10 applicability",
+          "deliverables": ["OWASP review"]
+        }
+      ],
+      "outputs": ["Threat model", "Security requirements", "Security testing plan"],
+      "agentPrompt": "Perform threat modeling using STRIDE methodology. Identify threats based on the architecture and data flows. Prioritize by risk and recommend mitigations for each."
+    },
+    {
+      "stepId": "1.10",
+      "stepName": "Define observability and reliability strategy",
+      "agentId": "DEVOPS",
+      "automationLevel": "full",
+      "approvalRequired": false,
+      "description": "Plan how the application will be monitored, measured, and kept reliable.",
+      "tasks": [
+        {
+          "taskId": "1.10.1",
+          "task": "Define Service Level Objectives (SLOs) and indicators (SLIs)",
+          "deliverables": ["SLO document"]
+        },
+        {
+          "taskId": "1.10.2",
+          "task": "Plan monitoring, logging, and tracing approach",
+          "deliverables": ["Observability strategy"]
+        },
+        {
+          "taskId": "1.10.3",
+          "task": "Define alerting thresholds and escalation paths",
+          "deliverables": ["Alerting plan"]
+        },
+        {
+          "taskId": "1.10.4",
+          "task": "Plan error budget and reliability targets",
+          "deliverables": ["Error budget policy"]
+        },
+        {
+          "taskId": "1.10.5",
+          "task": "Identify critical user journeys for monitoring",
+          "deliverables": ["Critical journey list"]
+        },
+        {
+          "taskId": "1.10.6",
+          "task": "Select observability tooling (APM, logging, tracing)",
+          "deliverables": ["Tool selection"]
+        }
+      ],
+      "outputs": ["SLO definitions", "Observability strategy", "Alerting plan"],
+      "agentPrompt": "Define appropriate SLOs for a solo-operated application. Recommend simple but effective monitoring stack. Balance reliability needs with operational overhead."
+    }
+  ],
+  "qualityGate": {
+    "name": "requirements-complete",
+    "requiredDeliverables": ["problem-statement", "user-personas", "user-stories", "mvp-scope"],
+    "requiredApprovals": ["mvp-scope", "threat-model"]
+  }
+}

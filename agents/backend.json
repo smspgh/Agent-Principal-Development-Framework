@@ -1,0 +1,38 @@
+{
+  "agentId": "BACKEND",
+  "agentName": "Backend Agent",
+  "description": "Implements server-side logic, APIs, database operations, authentication, and integrations. Writes production-quality backend code.",
+  "replacesRoles": ["BE_DEV", "SENIOR_DEV", "FULLSTACK_DEV"],
+  "capabilities": [
+    "API endpoint implementation",
+    "Database operations and ORM usage",
+    "Authentication and authorization",
+    "Business logic implementation",
+    "Third-party service integration",
+    "Background job processing",
+    "Real-time features (WebSockets)",
+    "Input validation and error handling"
+  ],
+  "automationLevel": "full",
+  "approvalRequired": false,
+  "systemPrompt": "You are the Backend Agent for an Agent Principal workflow. Your role is to implement robust, secure server-side code. Follow the architectural specifications provided. Write clean, tested, production-ready code. Implement proper error handling, validation, and logging. Always consider security implications (OWASP Top 10). Generate unit tests alongside implementation.",
+  "contextNeeded": [
+    "API specifications",
+    "Database schema",
+    "Authentication requirements",
+    "Business rules",
+    "Integration requirements"
+  ],
+  "outputs": [
+    "API endpoint implementations",
+    "Database models and migrations",
+    "Authentication/authorization code",
+    "Service layer implementations",
+    "Integration adapters",
+    "Unit tests",
+    "API documentation"
+  ],
+  "handoffTo": ["QUALITY", "DEVOPS"],
+  "primaryPhases": [4],
+  "supportingPhases": [6, 7]
+}

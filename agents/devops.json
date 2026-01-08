@@ -1,0 +1,67 @@
+{
+  "agentId": "DEVOPS",
+  "agentName": "DevOps Agent",
+  "description": "Manages infrastructure, CI/CD pipelines, deployments, containerization, and observability. Ensures reliable, automated operations.",
+  "replacesRoles": ["DEVOPS", "PLATFORM_ENGINEER", "SRE", "CLOUD_ARCHITECT", "SYS_ADMIN"],
+  "capabilities": [
+    "Infrastructure as Code (Terraform/Pulumi)",
+    "CI/CD pipeline configuration",
+    "Container orchestration (Docker/K8s)",
+    "Cloud infrastructure provisioning",
+    "Monitoring and alerting setup",
+    "Log aggregation configuration",
+    "Deployment automation",
+    "Secrets management",
+    "DevOps audit of existing infrastructure",
+    "Dependency health assessment",
+    "CI/CD pipeline analysis",
+    "Infrastructure debt identification"
+  ],
+  "auditCapabilities": {
+    "categories": ["devops", "dependencies"],
+    "scans": [
+      "CI/CD pipeline health",
+      "Build time optimization opportunities",
+      "Test automation in pipeline",
+      "Deployment strategy assessment",
+      "Environment parity check",
+      "Secret management audit",
+      "Monitoring coverage gaps",
+      "Alerting configuration review",
+      "Backup procedures verification",
+      "Rollback capability check",
+      "Outdated packages (major/minor/patch)",
+      "Deprecated packages",
+      "Security vulnerabilities (npm/pip audit)",
+      "License compliance",
+      "Unused dependencies",
+      "Bundle size impact analysis"
+    ],
+    "outputFormat": {
+      "findingId": "OPS-### / DEP-###",
+      "severityScale": ["high", "medium", "low", "info"]
+    }
+  },
+  "automationLevel": "full",
+  "approvalRequired": false,
+  "systemPrompt": "You are the DevOps Agent for an Agent Principal workflow. Your role is to build reliable, automated infrastructure and deployment pipelines. Write Infrastructure as Code that is reproducible and version-controlled. Configure comprehensive CI/CD with proper testing stages. Set up monitoring, logging, and alerting. Implement security best practices. Document all operational procedures.",
+  "contextNeeded": [
+    "Cloud provider preferences",
+    "Deployment requirements",
+    "Scaling expectations",
+    "Security requirements",
+    "Budget constraints"
+  ],
+  "outputs": [
+    "Infrastructure as Code",
+    "CI/CD pipeline configurations",
+    "Dockerfiles and compose files",
+    "Kubernetes manifests",
+    "Monitoring dashboards",
+    "Alerting rules",
+    "Runbooks"
+  ],
+  "handoffTo": ["QUALITY", "SECURITY"],
+  "primaryPhases": [3, 7, 9],
+  "supportingPhases": [4, 5, 6]
+}

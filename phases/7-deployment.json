@@ -1,0 +1,144 @@
+{
+  "phaseNumber": 7,
+  "phaseId": "DEPLOYMENT",
+  "phaseName": "Deployment and Launch",
+  "description": "Configure production infrastructure, deploy the application, and execute launch activities.",
+  "primaryAgents": ["DEVOPS"],
+  "objectives": [
+    "Provision production infrastructure",
+    "Establish CI/CD pipeline",
+    "Configure domain and security",
+    "Deploy to production safely",
+    "Set up production observability"
+  ],
+  "steps": [
+    {
+      "stepId": "7.1",
+      "stepName": "Configure production infrastructure",
+      "agentId": "DEVOPS",
+      "automationLevel": "full",
+      "approvalRequired": false,
+      "description": "Provision and configure all production infrastructure components.",
+      "tasks": [
+        {"taskId": "7.1.1", "task": "Provision production servers and infrastructure via IaC", "deliverables": ["Production infrastructure"]},
+        {"taskId": "7.1.2", "task": "Configure load balancers and auto-scaling policies", "deliverables": ["Load balancer config"]},
+        {"taskId": "7.1.3", "task": "Set up CDN for static assets and caching", "deliverables": ["CDN configuration"]},
+        {"taskId": "7.1.4", "task": "Configure database clusters and replicas", "deliverables": ["Database cluster"]},
+        {"taskId": "7.1.5", "task": "Set up Redis/cache layer if applicable", "deliverables": ["Cache layer"]},
+        {"taskId": "7.1.6", "task": "Configure network security (VPC, firewalls, etc.)", "deliverables": ["Network security"]}
+      ],
+      "outputs": ["Production infrastructure", "Network configuration", "Scaling policies"],
+      "agentPrompt": "Provision production infrastructure using the IaC templates from Phase 3. Configure load balancing, CDN, and database clusters. Implement network security."
+    },
+    {
+      "stepId": "7.2",
+      "stepName": "Set up CI/CD pipeline",
+      "agentId": "DEVOPS",
+      "automationLevel": "full",
+      "approvalRequired": false,
+      "description": "Build automated build, test, and deployment pipelines.",
+      "tasks": [
+        {"taskId": "7.2.1", "task": "Configure continuous integration with automated builds", "deliverables": ["CI pipeline"]},
+        {"taskId": "7.2.2", "task": "Set up automated testing in pipeline", "deliverables": ["Test automation"]},
+        {"taskId": "7.2.3", "task": "Implement security scanning in pipeline", "deliverables": ["Security scanning"]},
+        {"taskId": "7.2.4", "task": "Configure artifact management and versioning", "deliverables": ["Artifact management"]},
+        {"taskId": "7.2.5", "task": "Set up deployment automation", "deliverables": ["CD pipeline"]},
+        {"taskId": "7.2.6", "task": "Implement rollback mechanisms", "deliverables": ["Rollback automation"]}
+      ],
+      "outputs": ["CI/CD pipeline", "Automated deployments", "Rollback capability"],
+      "agentPrompt": "Configure complete CI/CD pipeline using GitHub Actions or similar. Include build, test, security scan, and deployment stages. Implement automated rollback."
+    },
+    {
+      "stepId": "7.3",
+      "stepName": "Configure domain and SSL",
+      "agentId": "DEVOPS",
+      "automationLevel": "full",
+      "approvalRequired": false,
+      "description": "Set up domain name and secure connections.",
+      "tasks": [
+        {"taskId": "7.3.1", "task": "Configure domain name DNS", "deliverables": ["Domain configuration"]},
+        {"taskId": "7.3.2", "task": "Set up DNS records and routing", "deliverables": ["DNS configuration"]},
+        {"taskId": "7.3.3", "task": "Obtain and install SSL certificates", "deliverables": ["SSL certificates"]},
+        {"taskId": "7.3.4", "task": "Configure HTTPS redirect and HSTS", "deliverables": ["HTTPS configuration"]},
+        {"taskId": "7.3.5", "task": "Set up certificate auto-renewal", "deliverables": ["Cert automation"]}
+      ],
+      "outputs": ["Domain configuration", "SSL/TLS setup", "HTTPS enforcement"],
+      "agentPrompt": "Configure DNS and SSL for the production domain. Set up automatic certificate renewal with Let's Encrypt or similar. Enforce HTTPS with HSTS."
+    },
+    {
+      "stepId": "7.4",
+      "stepName": "Deploy to staging for final validation",
+      "agentId": "DEVOPS",
+      "automationLevel": "full",
+      "approvalRequired": false,
+      "description": "Deploy to staging environment and perform final validation.",
+      "tasks": [
+        {"taskId": "7.4.1", "task": "Deploy application to staging environment", "deliverables": ["Staging deployment"]},
+        {"taskId": "7.4.2", "task": "Run full regression test suite", "deliverables": ["Regression results"]},
+        {"taskId": "7.4.3", "task": "Perform smoke testing of critical paths", "deliverables": ["Smoke test results"]},
+        {"taskId": "7.4.4", "task": "Validate all integrations work correctly", "deliverables": ["Integration validation"]},
+        {"taskId": "7.4.5", "task": "Prepare go/no-go checklist for Agent Principal", "deliverables": ["Launch checklist"]}
+      ],
+      "outputs": ["Validated staging deployment", "Launch approval"],
+      "agentPrompt": "Deploy to staging and run full test suite. Validate all integrations. Prepare go/no-go checklist for Agent Principal approval."
+    },
+    {
+      "stepId": "7.5",
+      "stepName": "Execute production deployment",
+      "agentId": "DEVOPS",
+      "automationLevel": "full",
+      "approvalRequired": false,
+      "description": "Deploy the application to production environment.",
+      "tasks": [
+        {"taskId": "7.5.1", "task": "Execute database migrations", "deliverables": ["Migration execution"]},
+        {"taskId": "7.5.2", "task": "Deploy application using chosen strategy", "deliverables": ["Production deployment"]},
+        {"taskId": "7.5.3", "task": "Run production smoke tests", "deliverables": ["Production validation"]},
+        {"taskId": "7.5.4", "task": "Monitor logs and metrics closely", "deliverables": ["Deployment monitoring"]},
+        {"taskId": "7.5.5", "task": "Validate critical user journeys work", "deliverables": ["Journey validation"]},
+        {"taskId": "7.5.6", "task": "Have rollback plan ready", "deliverables": ["Rollback readiness"]}
+      ],
+      "outputs": ["Live production deployment", "Deployment validation"],
+      "agentPrompt": "Execute production deployment following the deployment strategy. Run migrations safely. Monitor closely and be ready to rollback if issues arise."
+    },
+    {
+      "stepId": "7.6",
+      "stepName": "Configure deployment strategies",
+      "agentId": "DEVOPS",
+      "automationLevel": "full",
+      "approvalRequired": false,
+      "description": "Set up advanced deployment patterns for safe releases.",
+      "tasks": [
+        {"taskId": "7.6.1", "task": "Implement blue-green deployment capability", "deliverables": ["Blue-green setup"]},
+        {"taskId": "7.6.2", "task": "Configure canary release process", "deliverables": ["Canary releases"]},
+        {"taskId": "7.6.3", "task": "Set up feature flag system", "deliverables": ["Feature flags"]},
+        {"taskId": "7.6.4", "task": "Define progressive rollout percentages", "deliverables": ["Rollout strategy"]},
+        {"taskId": "7.6.5", "task": "Configure automatic rollback triggers", "deliverables": ["Auto-rollback"]}
+      ],
+      "outputs": ["Deployment strategies", "Feature flags", "Progressive rollout"],
+      "agentPrompt": "Configure deployment strategies for safe releases. Implement feature flags for controlled rollouts. Set up automatic rollback on error rate thresholds."
+    },
+    {
+      "stepId": "7.7",
+      "stepName": "Set up production observability",
+      "agentId": "DEVOPS",
+      "automationLevel": "full",
+      "approvalRequired": false,
+      "description": "Implement comprehensive monitoring and observability.",
+      "tasks": [
+        {"taskId": "7.7.1", "task": "Deploy application performance monitoring (APM)", "deliverables": ["APM setup"]},
+        {"taskId": "7.7.2", "task": "Configure structured logging and log aggregation", "deliverables": ["Logging infrastructure"]},
+        {"taskId": "7.7.3", "task": "Set up distributed tracing", "deliverables": ["Tracing setup"]},
+        {"taskId": "7.7.4", "task": "Configure uptime monitoring and synthetic checks", "deliverables": ["Uptime monitoring"]},
+        {"taskId": "7.7.5", "task": "Set up alerting with appropriate thresholds", "deliverables": ["Alerting configuration"]},
+        {"taskId": "7.7.6", "task": "Create operational dashboards", "deliverables": ["Dashboards"]}
+      ],
+      "outputs": ["Observability stack", "Dashboards", "Alerting"],
+      "agentPrompt": "Set up comprehensive observability using the tools selected in Phase 1. Configure APM, logging, tracing, and alerting. Create operational dashboards."
+    }
+  ],
+  "qualityGate": {
+    "name": "launch-approved",
+    "requiredDeliverables": ["production-infrastructure", "ci-cd-pipeline", "observability-stack"],
+    "requiredApprovals": []
+  }
+}

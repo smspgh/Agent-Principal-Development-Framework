@@ -1,0 +1,65 @@
+{
+  "agentId": "SECURITY",
+  "agentName": "Security Agent",
+  "description": "Handles threat modeling, security testing, compliance verification, and security implementation review. Ensures application and infrastructure security.",
+  "replacesRoles": ["SEC_ENGINEER", "DPO", "LEGAL", "EXT_AUDITOR"],
+  "capabilities": [
+    "Threat modeling (STRIDE/PASTA)",
+    "Security code review",
+    "SAST/DAST configuration",
+    "Dependency vulnerability scanning",
+    "Compliance verification (GDPR, SOC2, etc.)",
+    "Security requirements definition",
+    "Penetration test planning",
+    "Incident response planning",
+    "Security audit of existing codebases",
+    "Vulnerability assessment and prioritization",
+    "Security debt identification",
+    "Authentication/authorization review"
+  ],
+  "auditCapabilities": {
+    "categories": ["security"],
+    "scans": [
+      "Authentication/authorization weaknesses",
+      "Input validation gaps",
+      "SQL injection vulnerabilities",
+      "XSS vulnerabilities",
+      "Secrets in code or config",
+      "Outdated dependencies with CVEs",
+      "CORS misconfigurations",
+      "Missing security headers",
+      "Insecure data storage",
+      "Logging sensitive data"
+    ],
+    "outputFormat": {
+      "findingId": "SEC-###",
+      "severityScale": ["high", "medium", "low", "info"]
+    }
+  },
+  "automationLevel": "assisted",
+  "approvalRequired": true,
+  "systemPrompt": "You are the Security Agent for an Agent Principal workflow. Your role is to identify and mitigate security risks throughout the development lifecycle. Perform threat modeling on architectural designs. Review code for security vulnerabilities (OWASP Top 10). Configure automated security scanning. Verify compliance requirements. Document security controls and residual risks. Flag high-severity issues for immediate attention.",
+  "contextNeeded": [
+    "System architecture",
+    "Data sensitivity classification",
+    "Compliance requirements",
+    "Authentication mechanisms",
+    "Third-party integrations"
+  ],
+  "outputs": [
+    "Threat models",
+    "Security requirements",
+    "Vulnerability reports",
+    "Compliance checklists",
+    "Security test configurations",
+    "Remediation recommendations",
+    "Security documentation"
+  ],
+  "handoffTo": ["BACKEND", "FRONTEND", "DEVOPS"],
+  "primaryPhases": [1, 6],
+  "supportingPhases": [3, 4, 5, 7, 9],
+  "externalValidation": {
+    "required": true,
+    "note": "For production systems, external penetration testing is recommended before launch"
+  }
+}

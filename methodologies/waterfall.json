@@ -1,0 +1,84 @@
+{
+  "methodologyId": "WATERFALL",
+  "name": "Waterfall",
+  "description": "A linear, sequential approach where each phase must be completed before the next begins. Best suited for projects with well-defined requirements, regulatory constraints, or fixed scope and budget.",
+  "characteristics": [
+    "Sequential phases with formal gates",
+    "Comprehensive upfront planning",
+    "Formal documentation at each phase",
+    "Change control through formal process",
+    "Clear milestones and deliverables"
+  ],
+  "bestFor": [
+    "Regulated industries (healthcare, finance, government)",
+    "Fixed-price contracts",
+    "Well-understood, stable requirements",
+    "Projects requiring extensive documentation",
+    "Teams with limited Agile experience"
+  ],
+  "notIdealFor": [
+    "Rapidly changing requirements",
+    "Innovative or exploratory products",
+    "Projects needing early user feedback",
+    "Long-duration projects in dynamic markets"
+  ],
+  "primaryRoles": ["PROJECT_MANAGER", "TECH_LEAD", "BUSINESS_ANALYST"],
+  "supportingRoles": ["PRODUCT_OWNER", "STAKEHOLDERS", "CAB"],
+  "keyPractices": {
+    "planning": "Detailed upfront planning with Gantt charts and milestones",
+    "requirements": "Comprehensive requirements documentation before development",
+    "changeManagement": "Formal change request and CAB approval process",
+    "testing": "Dedicated testing phase after development completion",
+    "documentation": "Extensive documentation at each phase gate"
+  },
+  "phaseGates": [
+    {
+      "gate": "Requirements Complete",
+      "afterPhase": 1,
+      "criteria": ["All requirements documented", "Stakeholder sign-off", "Budget approved"]
+    },
+    {
+      "gate": "Design Complete",
+      "afterPhase": 2,
+      "criteria": ["All designs approved", "Technical architecture finalized", "Design documentation complete"]
+    },
+    {
+      "gate": "Development Complete",
+      "afterPhase": 5,
+      "criteria": ["All code complete", "Unit tests passing", "Code review complete"]
+    },
+    {
+      "gate": "Testing Complete",
+      "afterPhase": 6,
+      "criteria": ["All tests executed", "Critical bugs resolved", "UAT sign-off"]
+    },
+    {
+      "gate": "Deployment Complete",
+      "afterPhase": 7,
+      "criteria": ["Production deployment successful", "Smoke tests passing", "Monitoring active"]
+    }
+  ],
+  "includedStepIds": [
+    "1.1", "1.2", "1.3", "1.4", "1.5", "1.6", "1.7", "1.8", "1.9", "1.10",
+    "2.1", "2.2", "2.3", "2.4", "2.5", "2.6",
+    "3.1", "3.2", "3.3", "3.4", "3.5", "3.6", "3.7",
+    "4.1", "4.2", "4.3", "4.4", "4.5", "4.6", "4.7",
+    "5.1", "5.2", "5.3", "5.4", "5.5", "5.6", "5.7",
+    "6.1", "6.2", "6.3", "6.4", "6.5", "6.6", "6.7", "6.8",
+    "7.1", "7.2", "7.3", "7.4", "7.5", "7.6", "7.7",
+    "8.1", "8.2", "8.3", "8.4", "8.5",
+    "9.1", "9.2", "9.3", "9.4", "9.7", "9.8", "9.9", "9.10", "9.11"
+  ],
+  "excludedStepIds": [
+    "1.11", "1.12",
+    "9.5", "9.6", "9.12", "9.13", "9.14"
+  ],
+  "additionalConfig": {
+    "recommendedSprintLength": null,
+    "requiresBacklog": false,
+    "usesVelocity": false,
+    "hasIterations": false,
+    "formalApprovals": true,
+    "changeControlRequired": true
+  }
+}

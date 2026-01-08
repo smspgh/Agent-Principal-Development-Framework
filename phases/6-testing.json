@@ -1,0 +1,160 @@
+{
+  "phaseNumber": 6,
+  "phaseId": "TESTING",
+  "phaseName": "Testing and Quality Assurance",
+  "description": "Comprehensive testing to ensure quality, security, performance, and reliability.",
+  "primaryAgents": ["QUALITY", "SECURITY"],
+  "objectives": [
+    "Achieve comprehensive test coverage",
+    "Validate security posture",
+    "Verify performance under load",
+    "Ensure cross-platform compatibility",
+    "Validate user acceptance"
+  ],
+  "steps": [
+    {
+      "stepId": "6.1",
+      "stepName": "Implement unit testing",
+      "agentId": "QUALITY",
+      "automationLevel": "full",
+      "approvalRequired": false,
+      "description": "Build comprehensive unit test coverage for critical functionality.",
+      "tasks": [
+        {"taskId": "6.1.1", "task": "Write unit tests for all critical functions", "deliverables": ["Unit tests"]},
+        {"taskId": "6.1.2", "task": "Achieve target code coverage (e.g., 80%+)", "deliverables": ["Coverage report"]},
+        {"taskId": "6.1.3", "task": "Set up automated test runners in CI", "deliverables": ["CI test integration"]},
+        {"taskId": "6.1.4", "task": "Implement mutation testing for test quality", "deliverables": ["Mutation testing results"]},
+        {"taskId": "6.1.5", "task": "Add snapshot testing for UI components", "deliverables": ["Snapshot tests"]}
+      ],
+      "outputs": ["Unit test suite", "Coverage reports", "CI integration"],
+      "agentPrompt": "Write comprehensive unit tests for all business logic and components. Target 80%+ coverage. Include edge cases and error scenarios. Set up coverage reporting in CI."
+    },
+    {
+      "stepId": "6.2",
+      "stepName": "Implement integration testing",
+      "agentId": "QUALITY",
+      "automationLevel": "full",
+      "approvalRequired": false,
+      "description": "Test interactions between system components.",
+      "tasks": [
+        {"taskId": "6.2.1", "task": "Test API endpoint integrations", "deliverables": ["API integration tests"]},
+        {"taskId": "6.2.2", "task": "Test database interactions and transactions", "deliverables": ["Database tests"]},
+        {"taskId": "6.2.3", "task": "Validate data flow between components", "deliverables": ["Data flow tests"]},
+        {"taskId": "6.2.4", "task": "Test third-party service integrations", "deliverables": ["Integration tests"]},
+        {"taskId": "6.2.5", "task": "Implement contract testing", "deliverables": ["Contract tests"]}
+      ],
+      "outputs": ["Integration test suite", "Contract tests"],
+      "agentPrompt": "Create integration tests for API endpoints, database operations, and service integrations. Test transaction handling and data consistency."
+    },
+    {
+      "stepId": "6.3",
+      "stepName": "Implement end-to-end (E2E) testing",
+      "agentId": "QUALITY",
+      "automationLevel": "full",
+      "approvalRequired": false,
+      "description": "Test complete user flows through the application.",
+      "tasks": [
+        {"taskId": "6.3.1", "task": "Select E2E framework (Playwright)", "deliverables": ["E2E framework setup"]},
+        {"taskId": "6.3.2", "task": "Write E2E tests for critical user journeys", "deliverables": ["E2E test suite"]},
+        {"taskId": "6.3.3", "task": "Set up E2E tests in CI pipeline", "deliverables": ["CI E2E integration"]},
+        {"taskId": "6.3.4", "task": "Implement visual regression testing", "deliverables": ["Visual regression tests"]},
+        {"taskId": "6.3.5", "task": "Create stable test data management", "deliverables": ["Test data management"]}
+      ],
+      "outputs": ["E2E test suite", "Visual regression tests", "Test data fixtures"],
+      "agentPrompt": "Implement E2E tests using Playwright for all critical user journeys. Include visual regression testing. Create reliable test data fixtures."
+    },
+    {
+      "stepId": "6.4",
+      "stepName": "Conduct security testing",
+      "agentId": "SECURITY",
+      "automationLevel": "assisted",
+      "approvalRequired": true,
+      "description": "Validate application security through comprehensive testing.",
+      "tasks": [
+        {"taskId": "6.4.1", "task": "Run static application security testing (SAST)", "deliverables": ["SAST report"]},
+        {"taskId": "6.4.2", "task": "Perform dynamic application security testing (DAST)", "deliverables": ["DAST report"]},
+        {"taskId": "6.4.3", "task": "Conduct dependency vulnerability scanning (SCA)", "deliverables": ["Dependency scan report"]},
+        {"taskId": "6.4.4", "task": "Review for penetration testing needs", "deliverables": ["Pen test assessment"]},
+        {"taskId": "6.4.5", "task": "Test authentication and authorization flows", "deliverables": ["Auth security tests"]},
+        {"taskId": "6.4.6", "task": "Review for OWASP Top 10 vulnerabilities", "deliverables": ["OWASP review"]},
+        {"taskId": "6.4.7", "task": "Generate Software Bill of Materials (SBOM)", "deliverables": ["SBOM"]}
+      ],
+      "outputs": ["Security test results", "Vulnerability remediation", "SBOM"],
+      "agentPrompt": "Run comprehensive security scans (SAST, DAST, SCA). Review findings against OWASP Top 10. Generate SBOM for supply chain security. Report all findings for Agent Principal review."
+    },
+    {
+      "stepId": "6.5",
+      "stepName": "Conduct performance and load testing",
+      "agentId": "QUALITY",
+      "automationLevel": "full",
+      "approvalRequired": false,
+      "description": "Verify application performance under expected and peak load.",
+      "tasks": [
+        {"taskId": "6.5.1", "task": "Define performance benchmarks and SLAs", "deliverables": ["Performance benchmarks"]},
+        {"taskId": "6.5.2", "task": "Execute load tests with expected traffic", "deliverables": ["Load test results"]},
+        {"taskId": "6.5.3", "task": "Execute stress tests to find breaking points", "deliverables": ["Stress test results"]},
+        {"taskId": "6.5.4", "task": "Identify and optimize bottlenecks", "deliverables": ["Optimization report"]},
+        {"taskId": "6.5.5", "task": "Test database query performance", "deliverables": ["Query performance report"]},
+        {"taskId": "6.5.6", "task": "Measure and optimize Core Web Vitals", "deliverables": ["Web Vitals report"]}
+      ],
+      "outputs": ["Performance test results", "Optimization recommendations", "Capacity planning"],
+      "agentPrompt": "Run performance tests using k6 or similar. Define and validate performance SLAs. Identify bottlenecks and recommend optimizations."
+    },
+    {
+      "stepId": "6.6",
+      "stepName": "Test cross-browser and cross-device compatibility",
+      "agentId": "QUALITY",
+      "automationLevel": "full",
+      "approvalRequired": false,
+      "description": "Ensure consistent functionality across platforms.",
+      "tasks": [
+        {"taskId": "6.6.1", "task": "Test on all major browsers (Chrome, Firefox, Safari, Edge)", "deliverables": ["Browser test results"]},
+        {"taskId": "6.6.2", "task": "Test on iOS and Android devices", "deliverables": ["Mobile test results"]},
+        {"taskId": "6.6.3", "task": "Test on various screen sizes and resolutions", "deliverables": ["Responsive test results"]},
+        {"taskId": "6.6.4", "task": "Verify responsive behavior", "deliverables": ["Responsive verification"]},
+        {"taskId": "6.6.5", "task": "Test with browser extensions disabled/enabled", "deliverables": ["Extension compatibility"]}
+      ],
+      "outputs": ["Compatibility matrix", "Cross-platform validation"],
+      "agentPrompt": "Create compatibility test plan for major browsers and devices. Run E2E tests across platforms. Document any compatibility issues."
+    },
+    {
+      "stepId": "6.7",
+      "stepName": "Conduct User Acceptance Testing (UAT)",
+      "agentId": "QUALITY",
+      "automationLevel": "assisted",
+      "approvalRequired": true,
+      "description": "Validate the application meets user expectations.",
+      "tasks": [
+        {"taskId": "6.7.1", "task": "Create UAT test scenarios and scripts", "deliverables": ["UAT test scripts"]},
+        {"taskId": "6.7.2", "task": "Set up UAT environment with production-like data", "deliverables": ["UAT environment"]},
+        {"taskId": "6.7.3", "task": "Prepare testing session guide for Agent Principal", "deliverables": ["UAT session guide"]},
+        {"taskId": "6.7.4", "task": "Collect and document feedback", "deliverables": ["UAT feedback report"]},
+        {"taskId": "6.7.5", "task": "Verify acceptance criteria are met", "deliverables": ["Acceptance sign-off"]}
+      ],
+      "outputs": ["UAT results", "User feedback", "Acceptance confirmation"],
+      "agentPrompt": "Create comprehensive UAT test scenarios covering all acceptance criteria. Set up UAT environment. Prepare testing guide for Agent Principal to validate."
+    },
+    {
+      "stepId": "6.8",
+      "stepName": "Implement chaos engineering (optional)",
+      "agentId": "QUALITY",
+      "automationLevel": "full",
+      "approvalRequired": false,
+      "description": "Test system resilience through controlled failure injection.",
+      "tasks": [
+        {"taskId": "6.8.1", "task": "Identify critical failure scenarios", "deliverables": ["Failure scenario list"]},
+        {"taskId": "6.8.2", "task": "Design chaos experiments", "deliverables": ["Chaos experiment designs"]},
+        {"taskId": "6.8.3", "task": "Run controlled failure injection", "deliverables": ["Chaos test results"]},
+        {"taskId": "6.8.4", "task": "Validate system resilience and recovery", "deliverables": ["Resilience validation"]},
+        {"taskId": "6.8.5", "task": "Document findings and improvements", "deliverables": ["Chaos engineering report"]}
+      ],
+      "outputs": ["Resilience validation", "Recovery procedures", "System improvements"],
+      "agentPrompt": "Design and execute chaos experiments to validate system resilience. Test failure scenarios like database outage, network issues, and service failures."
+    }
+  ],
+  "qualityGate": {
+    "name": "release-ready",
+    "requiredDeliverables": ["unit-tests", "e2e-tests", "security-scan", "performance-tests"],
+    "requiredApprovals": ["security-scan"]
+  }
+}

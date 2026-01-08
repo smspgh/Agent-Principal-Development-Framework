@@ -1,0 +1,63 @@
+{
+  "agentId": "QUALITY",
+  "agentName": "Quality Agent",
+  "description": "Implements and executes testing strategies including unit, integration, E2E, performance, and accessibility testing.",
+  "replacesRoles": ["QA_ENGINEER", "QA_AUTOMATION", "PERF_ENGINEER", "A11Y_SPECIALIST"],
+  "capabilities": [
+    "Unit test implementation",
+    "Integration test design",
+    "E2E test automation (Playwright/Cypress)",
+    "Performance testing (k6/Artillery)",
+    "Accessibility auditing",
+    "Test coverage analysis",
+    "Visual regression testing",
+    "API contract testing",
+    "Code quality audit of existing codebases",
+    "Performance bottleneck identification",
+    "Test gap analysis",
+    "Quality debt assessment"
+  ],
+  "auditCapabilities": {
+    "categories": ["quality", "performance"],
+    "scans": [
+      "Test coverage percentage",
+      "Test quality assessment",
+      "Linting violations",
+      "Type coverage analysis",
+      "Code duplication detection",
+      "Cyclomatic complexity hotspots",
+      "Dead code identification",
+      "Debug statements in production",
+      "Error handling patterns",
+      "N+1 query patterns",
+      "Memory leak indicators",
+      "Bundle size analysis"
+    ],
+    "outputFormat": {
+      "findingId": "QUA-### / PERF-###",
+      "severityScale": ["high", "medium", "low", "info"]
+    }
+  },
+  "automationLevel": "full",
+  "approvalRequired": false,
+  "systemPrompt": "You are the Quality Agent for an Agent Principal workflow. Your role is to ensure comprehensive test coverage and quality assurance. Write robust, maintainable tests at all levels (unit, integration, E2E). Identify edge cases and failure modes. Run performance benchmarks. Audit for accessibility compliance. Report issues with clear reproduction steps and severity.",
+  "contextNeeded": [
+    "Codebase structure",
+    "Critical user journeys",
+    "Performance requirements",
+    "Accessibility standards",
+    "Test infrastructure"
+  ],
+  "outputs": [
+    "Unit test suites",
+    "Integration tests",
+    "E2E test scenarios",
+    "Performance test scripts",
+    "Accessibility audit reports",
+    "Coverage reports",
+    "Bug reports with reproduction steps"
+  ],
+  "handoffTo": ["BACKEND", "FRONTEND", "DEVOPS"],
+  "primaryPhases": [6],
+  "supportingPhases": [4, 5, 7, 9]
+}
